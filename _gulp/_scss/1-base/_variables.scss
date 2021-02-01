@@ -27,8 +27,10 @@ $color-s-1: #fe4261;
 $color-s-2: #9b51e0;
 $color-s-3: #2a6ca6;
 
+$primary-color: #000;
+
 $color-white: #ffffff;
-$color-black: #000000;
+$color-dark: #3B3B44;
 $color-gray: #cccccc;
 $color-red: #ff0000;
 $color-pink: #fec1cc;
@@ -39,6 +41,6 @@ $primary-color: $color-d-5;
 $link-color: $color-d-2;
 
 $primary-font: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$font-montserrat: 'Montserrat', $primary-font;
 
-$font-roboto: 'Roboto', $primary-font;
 $font-icomoon: 'icomoon';

@@ -11,3 +11,23 @@
   }
 }
   
+.btn-mobile {
+  padding: 0;
+  background: none;
+  display: flex;
+  font-weight: 400;
+  font-size: 16px;
+  align-items: center;
+  color: $color-dark;
+  text-transform: uppercase;
+  margin: 0 0 0 auto;
+  &::before {
+    font-family: $font-icomoon;
+    content: '\e904';
+    font-size: 15px;
+    margin-right: 9px;
+  }
+  span {
+    font-weight: 800;
+  }
+}

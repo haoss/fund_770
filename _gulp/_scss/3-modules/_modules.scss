@@ -1,1 +1,14 @@
 /* modules */
+.container {
+  padding: 0 15px;
+}
+.row {
+  @include media-breakpoint-up(md) {
+    margin-left: -15px;
+    margin-right: -15px;
+    &>[class*="col-"] {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}

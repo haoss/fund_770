@@ -19,16 +19,22 @@ html, body {
 body {
   // background-color: alpha(var(--color-primary), 1);
   background: $color-white;
-  font-size: rem(16px);
-  font-family: $primary-font;
+  font-size: rem(18px);
+  font-family: $font-montserrat;
   color: $primary-color;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
+  @include media-breakpoint-up(sm) {
+    font-size: rem(18px);
+  }
+  @include media-breakpoint-up(sm) {
+    font-size: rem(18px);
+  }
 }
 
 //  Typography
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  color: $primary-color;
+  color: $color-dark;
   font-weight: bold;
   text-decoration: none;
   margin: 0 0 15px 0;
@@ -38,11 +44,13 @@ body {
   line-height: 1.05;
   letter-spacing: -1px;
   margin-bottom: 25px;
+  font-weight: 900;
 }
 .h2, h2 {
-  font-size: rem(18px);
+  font-size: rem(40px);
   line-height: 1.14;
-  margin-bottom: 20px;
+  margin-bottom: 27px;
+  font-weight: 900;
 }
 .h3, h3 {
   font-size: rem(16px);
@@ -65,8 +73,8 @@ small, .small {
 }
 
 p {
-  line-height: 22px;
-  margin: 0 0 20px 0;
+  line-height: 1.55;
+  margin: 0 0 25px 0;
 }
 
 em, i, .em, .i {
@@ -115,7 +123,6 @@ img, .img {
   // width: 1280px;
   width: 100%;
   min-width: 320px;
-  padding: 0 15px;
 }
 
 /* text align */
@@ -211,7 +218,7 @@ ol li {
     background-color: $color-white !important;
   }
   &--black {
-    background-color: $color-black !important;
+    background-color: $primary-color !important;
   }
 }
 
@@ -268,7 +275,7 @@ ol li {
 /* color */
 .color {
   &--black {
-    color: $color-black !important;
+    color: $primary-color !important;
   }
   &--white {
     color: $color-white !important;

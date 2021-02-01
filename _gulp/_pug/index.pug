@@ -3,7 +3,7 @@ doctype
 html(lang="ru")
 
   -var active = 'Главная' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Главная' + ' - siteName' //title страницы для генерации верстки
+  -var pageTitle = 'Главная' + ' - Благотворительный фонд 707' //title страницы для генерации верстки
 
   include ./_include/_head
 
@@ -15,23 +15,15 @@ html(lang="ru")
     include ./_include/_header
 
     .content
-      .container
 
-        h1 Главная 22
+        section.section.about
+          .container
+            .content__head
+              h2 Наша миссия
 
-        .row
-          .col-md-4 4 collumns
-          .col-md-8 8 collumns
-          .col-md-12 12 collumns
-          .col-md-12 12 collumns
+            p Частный благотворительный Фонд «770» ведет свою деятельность с 2018 благодаря финансовой помощи группы бизнесменов. 
+            p «Кошерный дом» - флагманский проект фонда. Он направлен на помощь тысячам евреев, которые находятся за чертой бедности и не могут позволить себе купить кошерные продукты. В наших с вами силах не допустить, чтобы из-за финансовых проблем евреи отказывались от исполнения важной заповеди, от своих корней и в итоге отходили от Торы. 
 
-        .row
-          .col-md-12
-
-            button.btn.btn-primary(type="button") Button
-            button.btn.btn-danger(type="button") Button
-            button.btn.btn-custom-color(type="button") Button
-            button.btn.btn-custom-color2(type="button") Button
 
 
     include ./_include/_footer

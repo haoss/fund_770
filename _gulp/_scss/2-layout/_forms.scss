@@ -47,7 +47,7 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   line-height: 18px;
   text-align: left;
   color: #4D4D4D;
-  box-shadow: 0 4px 10px rgba($color-black,.25);
+  box-shadow: 0 4px 10px rgba($primary-color,.25);
   border-left: 3px solid transparent;
   min-width: 250px;
   &::before {
@@ -259,7 +259,7 @@ legend {
           right: 10px;
           top: 50%;
           transform: translateY(-50%);
-          color: $color-black;
+          color: $primary-color;
           pointer-events: none;
         }
       }

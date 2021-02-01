@@ -185,7 +185,7 @@ jQuery.extend(jQuery.validator.messages, {
 });
 
 function mobileNav() {
-  /*var btn = $('.btn-mobile');
+  var btn = $('.btn-mobile');
   var body = $('body');
   var nav = $('.mobile-nav');
   var navWrapper = $('.mobile-nav__wrapper');
@@ -211,7 +211,7 @@ function mobileNav() {
 
   navWrapper.on('click', function(e){
     e.stopPropagation();
-  })*/
+  });
 }
 
 function inputFocus(){

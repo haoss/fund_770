@@ -2,28 +2,19 @@
 
 $root-font-size: 16px;
 $grid-columns: 12;
-$grid-gutter-width: 30px;
+$grid-gutter-width: 15px;
 
 $grid-breakpoints: (
   xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
+  sm: 640px,
+  md: 960px,
+  lg: 1300px
 );
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px
-);
-
-$theme-colors: (
-  "primary": green,
-  "danger": pink,
-  "custom-color": yellow,
-  "custom-color2": lightblue
+  sm: 610px,
+  md: 940px,
+  lg: 1260px
 );
 
 @import "node_modules/bootstrap/scss/functions";

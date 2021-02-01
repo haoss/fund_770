@@ -1,4 +1,28 @@
 /* header */
 .header {
-  background-color: $color-gray;
+  background-color: $color-white;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 0 14px 0;
+  height: 90px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__navigation {
+    display: none;
+  }
+  &-holder {
+    height: 90px;
+  }
+  &__nav {
+    flex-grow: 1;
+  }
+}
+
+.logo {
+  flex-shrink: 0;
 }
