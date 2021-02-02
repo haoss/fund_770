@@ -19,10 +19,116 @@
     flex-grow: 1;
   }
   &__lang {
-    
+    display: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-left: 70px;
+    position: relative;
+    z-index: 160;
+    &-ul {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      background: $color-white;
+      box-shadow: 0px 10px 30px rgba($primary-color,.05);
+      width: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.35s;
+      margin: -27px 0 0 0;
+      padding-top: 27px;
+      padding-bottom: 26px;
+      padding-left: 26px;
+      li {
+        list-style: none;
+        padding: 0;
+        order: 2;
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &>a, &>span {
+          color: rgba($color-dark,.5);
+          text-decoration: none;
+          height: 20px;
+          line-height: 20px;
+          display: inline-block;
+          font-weight: 600;
+        }
+        &.active {
+          display: flex;
+          align-items: center;
+          line-height: 1;
+          white-space: nowrap;
+          color: $color-brown;
+          order: 1;
+          &>a, &>span {
+            font-weight: 800;
+            color: $color-brown;
+          }
+          &::after {
+            font-weight: 400;
+            content: "\e915";
+            font-family: $font-icomoon;
+            font-size: 7px;
+            margin-left: 6px;
+          }
+        }
+      }
+      .is-active & {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &-head {
+      display: flex;
+      align-items: center;
+      color: $color-brown;
+      font-weight: 800;
+      line-height: 1;
+      white-space: nowrap;
+      height: 20px;
+      line-height: 20px;
+      &::after {
+        font-weight: 400;
+        content: "\e915";
+        font-family: $font-icomoon;
+        font-size: 7px;
+        margin-left: 6px;
+      }
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    &__lang {
+      display: block;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    position: relative;
+    &__wrapper {
+      align-items: flex-start;
+    }
+    &__nav {
+      padding-top: 6px;
+    }
+    &__lang {
+      margin-top: 9px;
+    }
+    &-holder {
+      display: none;
+    }
   }
 }
 
 .logo {
   flex-shrink: 0;
+  @include media-breakpoint-up(md) {
+    img {
+      width: 199px;
+      height: 76px;
+    }
+  }
 }

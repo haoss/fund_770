@@ -57,6 +57,27 @@
       }
     }
   }
+  @include media-breakpoint-up(md) {
+    margin-top: -55px;
+    &__img {
+      height: 560px;
+      margin-bottom: 0;
+      img {
+        width: 1288px;
+        height: 664px;
+        transform: translateX(-680px);
+      }
+    }
+    &__head {
+      margin-top: -300px;
+      position: relative;
+      max-width: 425px;
+    }
+    &__content {
+      max-width: 425px;
+      position: relative;
+    }
+  }
 }
 
 .mission {

@@ -59,6 +59,7 @@ $(document).on('ready', function(){
   inputFocus();
   headerScroll();
   oneCarousel();
+  activeLang();
 
   // Chrome Smooth Scroll
   try {
@@ -80,15 +81,14 @@ $(window).on('scroll', function() {
 });
 $(window).on('resize', function() {
   var width = $(window).width();
-  /*var btn = $('.btn-mobile');
+  var btn = $('.j-btn-mobile');
   var body = $('body');
-  var nav = $('.mobile-nav');*/
+  var nav = $('.j-navigation');
 
   if (width >= 960) {
-    /*btn.removeClass('is-active');
+    btn.removeClass('is-active');
     body.removeClass('is-fixed');
     nav.removeClass('is-active');
-    $('.j-footer-nav').removeClass('is-active');*/
   }
 });
 
@@ -188,6 +188,7 @@ function mobileNav() {
   var btn = $('.j-btn-mobile');
   var body = $('body');
   var nav = $('.j-navigation');
+  var lang = $('.header__lang');
 
   btn.on('click', function(){
     var _this = $(this);
@@ -206,6 +207,31 @@ function mobileNav() {
     btn.removeClass('is-active');
     body.removeClass('is-fixed');
     nav.removeClass('is-active');
+    lang.removeClass('is-active');
+  });
+}
+
+function activeLang() {
+  var btn = $('.j-lang');
+  
+  btn.on('click', function(e){
+    e.stopPropagation();
+    $('.j-navigation').removeClass('is-active');
+    var _this = $(this);
+    var block = _this.parent();
+    if (block.hasClass('is-active')) {
+      block.removeClass('is-active');
+    } else {
+      block.addClass('is-active');
+    }
+  });
+
+  $(document).on('click', function(){
+    $('.header__lang').removeClass('is-active');
+  });
+
+  $('.header__lang-ul').on('click', function(e){
+    e.stopPropagation();
   });
 }
 

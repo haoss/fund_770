@@ -68,6 +68,11 @@ body {
       }
     }
   }
+  @include media-breakpoint-up(md) {
+    .top-screen__head & {
+      margin-bottom: 15px;
+    }
+  }
 }
 .h2, h2 {
   font-size: 40px;
@@ -108,6 +113,10 @@ body {
       text-align: left;
       margin-bottom: 15px;
     }
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 40px;
+    margin-bottom: 45px;
   }
 }
 .h3, h3 {
