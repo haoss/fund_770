@@ -10,17 +10,56 @@ header.header
           img(src="./images/logo.svg", alt="", width="139", height="53")
       
       .header__nav
-        nav.navigation.header__navigation(role="navigation")
-          ul
-            each val, key in navigation
-              if active === key
-                li.active
-                  a(href=val, title=key)= key
-              else
-                li
-                  a(href=val, title=key)= key
+        nav.navigation.j-navigation(role="navigation")
+          button.navigation__button.j-btn-mobile(type="button") 
+          .navigation__wrapper
+            ul.ul
+              each val, key in navigation
+                if active === key
+                  li.active
+                    a(href=val, title=key)= key
+                else
+                  li
+                    a(href=val, title=key)= key
+            ul.navigation__lang
+              li.active
+                span РУС
+              li
+                a(href="#!") ENG
+              li
+                a(href="#!") HE
+            .navigation__social
+              a(href="#!" target="_blank")
+                i.icon-facebook
+              a(href="#!" target="_blank")
+                i.icon-vk
+              a(href="#!" target="_blank")
+                i.icon-telegram
+              a(href="#!" target="_blank")
+                i.icon-whatsapp
+                  span.path1
+                  span.path2
+              a(href="#!" target="_blank")
+                i.icon-email
+                  span.path1
+                  span.path2
+                  span.path3
+                  span.path4
+                  span.path5
+                  span.path6
+                  span.path7
+                  span.path8
+                  span.path9
 
-        button.btn-mobile(type="button") 
+        button.btn-mobile.j-btn-mobile(type="button")
           span Меню
+
+      ul.header__lang
+        li.active
+          span РУС
+        li
+          a(href="#!") ENG
+        li
+          a(href="#!") HE
 
 .header-holder

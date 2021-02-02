@@ -185,10 +185,9 @@ jQuery.extend(jQuery.validator.messages, {
 });
 
 function mobileNav() {
-  var btn = $('.btn-mobile');
+  var btn = $('.j-btn-mobile');
   var body = $('body');
-  var nav = $('.mobile-nav');
-  var navWrapper = $('.mobile-nav__wrapper');
+  var nav = $('.j-navigation');
 
   btn.on('click', function(){
     var _this = $(this);
@@ -207,10 +206,6 @@ function mobileNav() {
     btn.removeClass('is-active');
     body.removeClass('is-fixed');
     nav.removeClass('is-active');
-  });
-
-  navWrapper.on('click', function(e){
-    e.stopPropagation();
   });
 }
 

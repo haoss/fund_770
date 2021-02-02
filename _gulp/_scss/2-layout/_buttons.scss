@@ -6,3 +6,26 @@ button {
     outline: none;
   }
 }
+
+.btn {
+  height: 70px;
+  font-size: 22px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-white;
+  background: $color-brown;
+  border: 0;
+  padding: 0 10px;
+  display: inline-block;
+  min-width: 290px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  &[href] {
+    line-height: 70px;
+  }
+  &:hover {
+    background: darken($color-brown, 20%);
+    color: $color-white;
+  }
+}

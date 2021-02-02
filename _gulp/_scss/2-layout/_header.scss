@@ -12,14 +12,14 @@
     display: flex;
     align-items: center;
   }
-  &__navigation {
-    display: none;
-  }
   &-holder {
     height: 90px;
   }
   &__nav {
     flex-grow: 1;
+  }
+  &__lang {
+    
   }
 }
 

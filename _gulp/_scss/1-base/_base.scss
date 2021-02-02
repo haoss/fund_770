@@ -25,11 +25,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   @include media-breakpoint-up(sm) {
+    font-size: rem(20px);
+  }
+  @include media-breakpoint-up(md) {
     font-size: rem(18px);
   }
-  @include media-breakpoint-up(sm) {
-    font-size: rem(18px);
+  &.is-fixed {
+    overflow: hidden;
   }
+}
+
+.base {
+  overflow: hidden;
+  position: relative;
 }
 
 //  Typography
@@ -40,31 +48,81 @@ body {
   margin: 0 0 15px 0;
 }
 .h1, h1 {
-  font-size: rem(21px);
-  line-height: 1.05;
+  font-size: 50px;
+  line-height: 1.2;
   letter-spacing: -1px;
   margin-bottom: 25px;
   font-weight: 900;
+  .top-screen__head & {
+    span {
+      display: block;
+      font-size: 22px;
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    font-size: 70px;
+    margin-bottom: 30px;
+    .top-screen__head & {
+      span {
+        font-size: 30px;
+      }
+    }
+  }
 }
 .h2, h2 {
-  font-size: rem(40px);
+  font-size: 40px;
   line-height: 1.14;
   margin-bottom: 27px;
   font-weight: 900;
+  .recommendation .content__head & {
+    span {
+      display: block;
+      font-size: 20px;
+    }
+  }
+  .video .content__head & {
+    font-size: 60px;
+    span {
+      display: block;
+      font-size: 26px;
+    }
+  }
+  .beneficiaries .content__head & {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  @include media-breakpoint-up(sm) {
+    font-size: 50px;
+    margin-bottom: 34px;
+    .mission .content__head & {
+      text-align: center;
+    }
+    .video .content__head & {
+      span {
+        font-size: 30px;
+      }
+    }
+    .beneficiaries .content__head & {
+      font-size: 40px;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+  }
 }
 .h3, h3 {
-  font-size: rem(16px);
+  font-size: 16px;
   line-height: 1.38;
 }
 .h4, h4 {
-  font-size: rem(14px);
+  font-size: 14px;
   line-height: 1.38;
 }
 .h5, h5 {
-  font-size: rem(13px);
+  font-size: 13px;
 }
 .h6, h6 {
-  font-size: rem(12px);
+  font-size: 12px;
 }
 
 small, .small {

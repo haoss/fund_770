@@ -8,26 +8,142 @@ html(lang="ru")
   include ./_include/_head
 
   body
+    .base
+      // Preloader
+      include ./_include/_preloader
 
-    // Preloader
-    include ./_include/_preloader
+      include ./_include/_header
 
-    include ./_include/_header
+      // Top screen
+      section.top-screen
+        .top-screen__imgs
+          img(src="./images/top-screen-img-1.png", alt="")
+          img(src="./images/top-screen-img-2.png", alt="")
+          img(src="./images/top-screen-img-3.png", alt="")
+          img(src="./images/top-screen-img-4.png", alt="")
+          img(src="./images/top-screen-img-5.png", alt="")
+        .top-screen__img
+          img(src="./tmp/top-screen.png", alt="")
+        .container
+          .top-screen__head
+            h1 Кошерная 
+              span продуктовая помощь евреям СНГ
+          .top-screen__content
+            p Если из-за бедности еврей перестаёт быть евреем, не соблюдая кашрут, весь мир обязан протянуть ему руку помощи
+            +btn('Оказать помощь')(href='#!')
 
-    .content
+      // Content
+      .content
 
-        section.section.about
-          .container
-            .content__head
-              h2 Наша миссия
+          // Mission
+          section.mission
+            .container
+              .content__head
+                h2 Наша миссия
 
-            p Частный благотворительный Фонд «770» ведет свою деятельность с 2018 благодаря финансовой помощи группы бизнесменов. 
-            p «Кошерный дом» - флагманский проект фонда. Он направлен на помощь тысячам евреев, которые находятся за чертой бедности и не могут позволить себе купить кошерные продукты. В наших с вами силах не допустить, чтобы из-за финансовых проблем евреи отказывались от исполнения важной заповеди, от своих корней и в итоге отходили от Торы. 
+              p Частный благотворительный Фонд «770» ведет свою деятельность с 2018 благодаря финансовой помощи группы бизнесменов. 
+              p «Кошерный дом» - флагманский проект фонда. Он направлен на помощь тысячам евреев, которые находятся за чертой бедности и не могут позволить себе купить кошерные продукты. В наших с вами силах не допустить, чтобы из-за финансовых проблем евреи отказывались от исполнения важной заповеди, от своих корней и в итоге отходили от Торы. 
+          // /end Mission
 
+          // Money
+          section.money
+            .container
+              .content__head
+                h2 Money
+          // /end Money
 
+          // Video
+          section.video
+            .container
+              .video__wrapper
+                .div1
+                  .content__head
+                    h2 Видео 
+                      span о проекте
+                  .video__content
+                    p Рассказ о нашем благотворительном фонде ведет Любавичский Ребе 
+                .div2
+                  .video__div
+                    img(src="./tmp/video-img.png", alt="")
+                    a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox="").video__div-link
+          // /end Video
 
-    include ./_include/_footer
-    div(style="height: 1000px; background-color: #000")
+          // Beneficiaries
+          section.beneficiaries
+            .container
+              .content__head
+                h2 Подопечные Фонда «770»
+              .beneficiaries__row
+                div
+                  .beneficiaries__block
+                    .beneficiaries__block-thumb
+                      img(src="./tmp/beneficiaries-img-1.png", alt="")
+                    p Люди, соблюдающие кашрут, но не имеющие финансовой возможности покупать кошерные продукты.
+                div
+                  .beneficiaries__block
+                    .beneficiaries__block-thumb
+                      img(src="./tmp/beneficiaries-img-2.png", alt="")
+                    p Одинокие пожилые люди, пенсионеры
+                div
+                  .beneficiaries__block
+                    .beneficiaries__block-thumb
+                      img(src="./tmp/beneficiaries-img-3.png", alt="")
+                    p Матери-одиночки, многодетные семьи
+          // /end Beneficiaries
+
+          // Geography
+          section.geography
+            .container
+              .content__head
+                h2 География нашей помощи
+          // /end Geography
+
+          // Results
+          section.results
+            .container
+              .content__head
+                h2 Результаты проекта «Кошерный дом» за 2020 год 
+          // /end Results
+
+          // number
+          section.number
+            .container
+              .content__head
+                h2 number
+          // /end number
+
+          // recommendation
+          section.recommendation
+            .container
+              .content__head
+                h2
+                  span Рекомендации 
+                  | от раввинов
+          // /end recommendation
+
+          // form
+          section.form
+            .container
+              .content__head
+                h2 form
+          // /end form
+
+          // direction
+          section.direction
+            .container
+              .content__head
+                h2 direction
+          // /end direction
+
+          // family
+          section.family
+            .container
+              .content__head
+                h2 family
+          // /end family
+
+      include ./_include/_footer
+      div(style="height: 1000px; background-color: #000")
 
     // Load Scripts
     include ./_include/_footer-js
