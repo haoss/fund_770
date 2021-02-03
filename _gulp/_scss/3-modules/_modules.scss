@@ -139,7 +139,7 @@
     padding-bottom: 150px;
     background: {
       size: 2143px;
-      position: center 40px;
+      position: center 26px;
     };
   }
 }
@@ -171,7 +171,7 @@
       image: url('../images/money-wave-bottom.png');
     }
   }
-  .container {
+  &>.container {
     position: relative;
     margin-top: -41px;
     margin-bottom: -5px;
@@ -180,20 +180,72 @@
     font-weight: 900;
     font-size: 18px;
     color: $color-dark;
+    margin-bottom: 40px;
+    position: relative;
     &-head {
-      margin-bottom: 7px;
+      margin-bottom: 12px;
       line-height: 1;
+      .--target & {
+        padding-left: 40px;
+        font-size: 22px;
+      }
     }
     &-price {
       color: $color-brown;
       font-size: 36px;
       line-height: 1;
+      .--target & {
+        font-size: 40px;
+      }
+    }
+    &.--left {
+      margin-bottom: 36px;
+    }
+    &.--target {
+      margin-top: -15px;
+      margin-bottom: 0;
+      z-index: 10;
+    }
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: rgba($color-dark,.5);
+    p {
+      margin-bottom: 0;
+      max-width: 190px;
+    }
+    &-percent {
+      color: $color-white;
+      font-size: 110px;
+      line-height: 1;
+      font-weight: 900;
+      position: absolute;
+      margin-top: -318px;
+      margin-left: 203px;
+    }
+    &>div {
+      &.div2 {
+        display: none;
+        padding-left: 32px;
+      }
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &>div {
+      max-width: 290px;
+      width: 100%;
     }
   }
   &__box {
     height: 220px;
     width: 220px;
     position: relative;
+    z-index: 5;
     background: #3b3b44;
     border-radius: 100%;
     overflow: hidden; 
@@ -209,7 +261,7 @@
       display: flex;
       justify-content: center; 
       align-items: center;
-      color: rgba($color-white,.2);
+      color: rgba($color-white,.1);
       font-size: 120px;
       font-weight: 900;
       line-height: 1;
@@ -222,7 +274,7 @@
       width: 100%;
       height: 100%;
       transform: translate(0,100%);
-      background: rgba(214,166,114,1);
+      background: rgba(176,140,102,1);
       transition: all .3s;
       &_wave {
         width: 200%;
@@ -230,12 +282,12 @@
         bottom: 100%;
         &_back {
           right: 0;
-          fill: rgba(214,166,114,.8);
+          fill: rgba(176,140,102,.8);
           animation: wave-back 1.4s infinite linear;
         }
         &_front {
           left: 0;
-          fill: rgba(214,166,114,1);
+          fill: rgba(176,140,102,1);
           margin-bottom: -1px;
           animation: wave-front .7s infinite linear;
         }
@@ -253,9 +305,45 @@
       transform: translate(50%, 0);
     }
   }
-  @include media-breakpoint-up(sm) {}
-  @include media-breakpoint-up(md) {}
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-only(sm) {
+    &>.container {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &__wrapper {
+      &>div {
+        max-width: 580px;
+        &.div2 {
+          padding-left: 30px;
+        }
+      }
+      &-top {
+        display: flex;
+      }
+    }
+    &__block {
+      margin-bottom: 0;
+      &-head {
+        font-size: 24px;
+        .--target & {
+          font-size: 30px;
+        }
+      }
+      &-price {
+        font-size: 46px;
+        .--target & {
+          font-size: 70px;
+        }
+      }
+      &.--left {
+        margin-left: 60px;
+        margin-bottom: 13px;
+      }
+      &.--target {
+        margin-top: -35px;
+        margin-bottom: 50px;
+      }
+    }
     &__box {
       height: 350px;
       width: 350px;
@@ -263,6 +351,110 @@
       box-shadow: 0px 10px 40px rgba($primary-color,.25), 0 0 0 40px $color-white;
       &-percent {
         font-size: 170px;
+      }
+    }
+    &__info {
+      &-percent {
+        font-size: 150px;
+        margin-top: -388px;
+        margin-left: 420px;
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &__wrapper {
+      flex-direction: row;
+      &>div {
+        width: auto;
+        max-width: inherit;
+        &.div1 {
+          min-width: 250px;
+        }
+        &.div2 {
+          flex-shrink: 0;
+        }
+        &.div3 {
+          margin-left: -25px;
+        }
+      }
+    }
+    &__box {
+      height: 250px;
+      width: 250px;
+      margin: 28px;
+      box-shadow: 0px 10px 28px rgba($primary-color,.25), 0 0 0 28px $color-white;
+      &-percent {
+        font-size: 130px;
+      }
+    }
+    &__info {
+      margin-bottom: 30px;
+      &-percent {
+        position: relative;
+        margin-top: 0;
+        margin-left: 0;
+      }
+      &>div {
+        &.div2 {
+          display: block;
+        }
+      }
+    }
+    &__block {
+      &.--target {
+        margin-top: 0;
+      }
+      &.--left {
+        margin-bottom: 0;
+      }
+    }
+    &>.container {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &__box {
+      height: 350px;
+      width: 350px;
+      margin: 40px;
+      box-shadow: 0px 10px 40px rgba($primary-color,.25), 0 0 0 40px $color-white;
+      &-percent {
+        font-size: 180px;
+      }
+    }
+    &__block {
+      font-size: 24px;
+      &-head {
+        .--target & {
+          font-size: 30px;
+        }
+      }
+      &-price {
+        font-size: 46px;
+        .--target & {
+          font-size: 70px;
+        }
+      }
+      &.--start {
+        margin-bottom: 70px;
+      }
+    }
+    &__wrapper {
+      padding-left: 60px;
+      &>div {
+        &.div1 {
+          min-width: 275px;
+        }
+        &.div3 {
+          margin-left: -35px;
+        }
+      }
+    }
+    &__info {
+      font-size: 14px;
+      &-percent {
+        font-size: 150px;
       }
     }
   }

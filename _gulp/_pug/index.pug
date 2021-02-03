@@ -50,12 +50,13 @@ html(lang="ru")
             .container
               .money__wrapper
                 .div1
-                  .money__block.--start
-                    .money__block-head Уже собрано
-                    .money__block-price $ 350 000
-                  .money__block.--left
-                    .money__block-head Уже собрано
-                    .money__block-price $ 350 000
+                  .money__wrapper-top
+                    .money__block.--start
+                      .money__block-head Уже собрано
+                      .money__block-price $ 350 000
+                    .money__block.--left
+                      .money__block-head Осталось собрать
+                      .money__block-price $ 850 000
                 .div2
                   svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' style='display: none;')
                     symbol#wave
@@ -72,9 +73,14 @@ html(lang="ru")
                       svg.water_wave.water_wave_front(viewBox='0 0 560 20')
                         use(href='#wave')
                 .div3
+                  .money__info
+                    .div1
+                      .money__info-percent %
+                    .div2
+                      p Вот столько уже собрано благодаря всеобщему нашему обьединению не безразличных людей
                   .money__block.--target
-                    .money__block-head Уже собрано
-                    .money__block-price $ 350 000
+                    .money__block-head Цель
+                    .money__block-price $ 1 200 000
           // /end Money
 
           // Video
