@@ -106,6 +106,15 @@ body {
     text-align: center;
     margin-bottom: 5px;
   }
+  .results .content__head & {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+  .number .content__head & {
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
   @include media-breakpoint-up(sm) {
     font-size: 50px;
     margin-bottom: 34px;

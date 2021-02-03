@@ -729,3 +729,41 @@
     }
   }
 }
+
+.geography {
+  position: relative;
+  padding-top: 125px;
+  padding-bottom: 189px;
+  background-color: $color-gray;
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 164px;
+    width: 1920px;
+    background: {
+      image: url('../images/money-wave-top.png');
+      repeat: no-repeat;
+      position: center top;
+      color: $color-white;
+    };
+  }
+  &::after {
+    top: auto;
+    bottom: 0;
+    background: {
+      image: url('../images/money-wave-bottom.png');
+    }
+  }
+  &__wrapper {
+    position: relative;
+  }
+  &__content {
+    font-size: 16px;
+  }
+  &__description {
+    font-size: 20px;
+  }
+}
