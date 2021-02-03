@@ -83,6 +83,44 @@ html(lang="ru")
                     .money__block-price $ 1 200 000
           // /end Money
 
+          // Money
+          section.money
+            .container
+              .money__wrapper
+                .div1
+                  .money__wrapper-top
+                    .money__block.--start
+                      .money__block-head Сбор закончен
+                      .money__block-price Спасибо
+                    .money__block.--left
+                      .money__block-head Собрали
+                      .money__block-price $ 1 200 000
+                .div2
+                  svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' style='display: none;')
+                    symbol#wave2
+                      path(d='M420,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C514,6.5,518,4.7,528.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H420z')
+                      path(d='M420,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C326,6.5,322,4.7,311.5,2.7C304.3,1.4,293.6-0.1,280,0c0,0,0,0,0,0v20H420z')
+                      path(d='M140,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C234,6.5,238,4.7,248.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H140z')
+                      path(d='M140,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C46,6.5,42,4.7,31.5,2.7C24.3,1.4,13.6-0.1,0,0c0,0,0,0,0,0l0,20H140z')
+                  .money__box
+                    .money__box-percent
+                      .money__box-percentNum#count2 0
+                    #water2.water
+                      svg.water_wave.water_wave_back(viewBox='0 0 560 20')
+                        use(href='#wave')
+                      svg.water_wave.water_wave_front(viewBox='0 0 560 20')
+                        use(href='#wave')
+                .div3
+                  .money__info
+                    .div1
+                      .money__info-percent %
+                    .div2
+                      p Вот столько уже собрано благодаря всеобщему нашему обьединению не безразличных людей
+                  .money__block.--target
+                    .money__block-head Цель
+                    .money__block-price $ 1 200 000
+          // /end Money
+
           // Video
           section.video
             .container
@@ -192,6 +230,19 @@ html(lang="ru")
           water.style.transform='translate(0'+','+(100-percent)+'%)';
           if(percent==35){
             clearInterval(interval);
+          }
+        },60);
+
+        var cnt2=document.getElementById("count2"); 
+        var water2=document.getElementById("water2");
+        var percent2=cnt2.innerText;
+        var interval2;
+        interval2=setInterval(function(){ 
+          percent2++; 
+          cnt2.innerHTML = percent2; 
+          water2.style.transform='translate(0'+','+(100-percent2)+'%)';
+          if(percent2==100){
+            clearInterval(interval2);
           }
         },60);
       })
