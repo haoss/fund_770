@@ -190,4 +190,18 @@
       }
     }
   }
+  @include media-breakpoint-up(lg) {
+    &__wrapper {
+      .ul {
+        li {
+          &+li {
+            margin-left: 60px;
+          }
+        }
+      }
+    }
+    .ul {
+      font-size: 16px;
+    }
+  }
 }

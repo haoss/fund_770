@@ -92,6 +92,7 @@
       white-space: nowrap;
       height: 20px;
       line-height: 20px;
+      cursor: pointer;
       &::after {
         font-weight: 400;
         content: "\e915";
@@ -121,6 +122,14 @@
       display: none;
     }
   }
+  @include media-breakpoint-up(lg) {
+    &__nav {
+      padding-top: 13px;
+    }
+    &__lang {
+      margin-top: 13px;
+    }
+  }
 }
 
 .logo {
@@ -129,6 +138,12 @@
     img {
       width: 199px;
       height: 76px;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    img {
+      width: 278px;
+      height: 105px;
     }
   }
 }

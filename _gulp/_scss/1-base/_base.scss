@@ -73,6 +73,15 @@ body {
       margin-bottom: 15px;
     }
   }
+  @include media-breakpoint-up(lg) {
+    font-size: 100px;
+    .top-screen__head & {
+      margin-bottom: 25px;
+      span {
+        font-size: 50px;
+      }
+    }
+  }
 }
 .h2, h2 {
   font-size: 40px;
@@ -125,6 +134,16 @@ body {
     }
     .beneficiaries .content__head & {
       margin-bottom: 20px;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 50px;
+    margin-bottom: 35px;
+    .video .content__head & {
+      font-size: 60px;
+      span {
+        font-size: 30px;
+      }
     }
   }
 }

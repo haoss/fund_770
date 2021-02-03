@@ -18,6 +18,10 @@
   &__imgs {
     position: absolute;
     display: none;
+    img {
+      display: none;
+      position: absolute;
+    }
   }
   &__img {
     margin: 0 0 10px 0;
@@ -77,6 +81,33 @@
       max-width: 425px;
       position: relative;
     }
+    &__imgs {
+      // display: block;
+      .img2 {
+        display: block;
+        width: 190px;
+        height: 137px;
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: -84px;
+    &__head {
+      max-width: 715px;
+      margin-top: -442px;
+    }
+    &__content {
+      max-width: 715px;
+      font-size: 20px;
+    }
+    &__img {
+      height: 785px;
+      img {
+        width: 1727px;
+        height: 925px;
+        transform: translateX(-760px);
+      }
+    }
   }
 }
 
@@ -102,6 +133,14 @@
       size: 1336px;
       position: 44% 40px;
     }
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 165px;
+    padding-bottom: 150px;
+    background: {
+      size: 2143px;
+      position: center 40px;
+    };
   }
 }
 
@@ -137,7 +176,96 @@
     margin-top: -41px;
     margin-bottom: -5px;
   }
+  &__block {
+    font-weight: 900;
+    font-size: 18px;
+    color: $color-dark;
+    &-head {
+      margin-bottom: 7px;
+      line-height: 1;
+    }
+    &-price {
+      color: $color-brown;
+      font-size: 36px;
+      line-height: 1;
+    }
+  }
+  &__box {
+    height: 220px;
+    width: 220px;
+    position: relative;
+    background: #3b3b44;
+    border-radius: 100%;
+    overflow: hidden; 
+    box-shadow: 0px 10px 26px rgba($primary-color,.25), 0 0 0 26px $color-white;
+    margin: 26px;
+    &-percent {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      color: rgba($color-white,.2);
+      font-size: 120px;
+      font-weight: 900;
+      line-height: 1;
+    } 
+    .water {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index:2;
+      width: 100%;
+      height: 100%;
+      transform: translate(0,100%);
+      background: rgba(214,166,114,1);
+      transition: all .3s;
+      &_wave {
+        width: 200%;
+        position: absolute;
+        bottom: 100%;
+        &_back {
+          right: 0;
+          fill: rgba(214,166,114,.8);
+          animation: wave-back 1.4s infinite linear;
+        }
+        &_front {
+          left: 0;
+          fill: rgba(214,166,114,1);
+          margin-bottom: -1px;
+          animation: wave-front .7s infinite linear;
+        }
+      }
+    }
+  }
+  @keyframes wave-front {
+    100% {
+      transform: translate(-50%, 0);
+    }
+  }
+  
+  @keyframes wave-back {
+    100% {
+      transform: translate(50%, 0);
+    }
+  }
   @include media-breakpoint-up(sm) {}
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+    &__box {
+      height: 350px;
+      width: 350px;
+      margin: 40px;
+      box-shadow: 0px 10px 40px rgba($primary-color,.25), 0 0 0 40px $color-white;
+      &-percent {
+        font-size: 170px;
+      }
+    }
+  }
 }
 
 .video {
@@ -246,6 +374,7 @@
       display: flex;
       &>div {
         &.div1 {
+          padding-top: 25px;
           width: 200px;
           flex-shrink: 0;
           position: relative;
@@ -270,6 +399,42 @@
         width: 895px;
         height: 474px;
         background-size: 895px 474px;
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 180px;
+    background: {
+      size: 2143px;
+      position: center 90px;
+    };
+    &__content {
+      font-size: 18px;
+      max-width: 245px;
+    }
+    &__wrapper {
+      &>div {
+        &.div1 {
+          width: 277px;
+          padding-top: 75px;
+        }
+      }
+    }
+    &__div {
+      width: 831px;
+      &-link {
+        width: 120px;
+        height: 120px;
+        font-size: 34px;
+        left: -40px;
+        bottom: -40px;
+      }
+      &::before {
+        width: 1197px;
+        height: 634px;
+        background-size: 1197px 634px;
+        top: -40px;
+        margin-left: -10px;
       }
     }
   }
@@ -350,6 +515,22 @@
       &-thumb {
         img {
           height: 274px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &__block {
+      &-thumb {
+        margin-bottom: 30px;
+        &::before {
+          width: 185px;
+          height: 350px;
+          background-size: 185px 350px;
+          right: -45px;
+        }
+        img {
+          height: 345px;
         }
       }
     }

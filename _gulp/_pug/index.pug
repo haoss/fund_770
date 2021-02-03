@@ -17,11 +17,11 @@ html(lang="ru")
       // Top screen
       section.top-screen
         .top-screen__imgs
-          img(src="./images/top-screen-img-1.png", alt="")
-          img(src="./images/top-screen-img-2.png", alt="")
-          img(src="./images/top-screen-img-3.png", alt="")
-          img(src="./images/top-screen-img-4.png", alt="")
-          img(src="./images/top-screen-img-5.png", alt="")
+          img(src="./images/top-screen-img-1.png", alt="").img1
+          img(src="./images/top-screen-img-2.png", alt="").img2
+          img(src="./images/top-screen-img-3.png", alt="").img3
+          img(src="./images/top-screen-img-4.png", alt="").img4
+          img(src="./images/top-screen-img-5.png", alt="").img5
         .top-screen__img
           img(src="./tmp/top-screen.png", alt="")
         .container
@@ -48,8 +48,33 @@ html(lang="ru")
           // Money
           section.money
             .container
-              .content__head
-                h2 Money
+              .money__wrapper
+                .div1
+                  .money__block.--start
+                    .money__block-head Уже собрано
+                    .money__block-price $ 350 000
+                  .money__block.--left
+                    .money__block-head Уже собрано
+                    .money__block-price $ 350 000
+                .div2
+                  svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' style='display: none;')
+                    symbol#wave
+                      path(d='M420,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C514,6.5,518,4.7,528.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H420z')
+                      path(d='M420,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C326,6.5,322,4.7,311.5,2.7C304.3,1.4,293.6-0.1,280,0c0,0,0,0,0,0v20H420z')
+                      path(d='M140,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C234,6.5,238,4.7,248.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H140z')
+                      path(d='M140,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C46,6.5,42,4.7,31.5,2.7C24.3,1.4,13.6-0.1,0,0c0,0,0,0,0,0l0,20H140z')
+                  .money__box
+                    .money__box-percent
+                      .money__box-percentNum#count 0
+                    #water.water
+                      svg.water_wave.water_wave_back(viewBox='0 0 560 20')
+                        use(href='#wave')
+                      svg.water_wave.water_wave_front(viewBox='0 0 560 20')
+                        use(href='#wave')
+                .div3
+                  .money__block.--target
+                    .money__block-head Уже собрано
+                    .money__block-price $ 350 000
           // /end Money
 
           // Video
@@ -149,3 +174,18 @@ html(lang="ru")
     include ./_include/_footer-js
     script(src="./js/common.js")
 
+    script.
+      $(document).on('ready', function(){
+        var cnt=document.getElementById("count"); 
+        var water=document.getElementById("water");
+        var percent=cnt.innerText;
+        var interval;
+        interval=setInterval(function(){ 
+          percent++; 
+          cnt.innerHTML = percent; 
+          water.style.transform='translate(0'+','+(100-percent)+'%)';
+          if(percent==35){
+            clearInterval(interval);
+          }
+        },60);
+      })
