@@ -17,11 +17,12 @@ html(lang="ru")
       // Top screen
       section.top-screen
         .top-screen__imgs
-          img(src="./images/top-screen-img-1.png", alt="").img1
-          img(src="./images/top-screen-img-2.png", alt="").img2
-          img(src="./images/top-screen-img-3.png", alt="").img3
-          img(src="./images/top-screen-img-4.png", alt="").img4
-          img(src="./images/top-screen-img-5.png", alt="").img5
+          .container
+            img(src="./images/top-screen-img-1.png", alt="").img1
+            img(src="./images/top-screen-img-2.png", alt="").img2
+            img(src="./images/top-screen-img-3.png", alt="").img3
+            img(src="./images/top-screen-img-4.png", alt="").img4
+            img(src="./images/top-screen-img-5.png", alt="").img5
         .top-screen__img
           img(src="./tmp/top-screen.png", alt="")
         .container
@@ -171,6 +172,27 @@ html(lang="ru")
                     p.geography__description Фонд «770» оказывает помощь 50 еврейским общинам в 46 городах России и Белоруссии. Поддержка особенно нужна евреям из небольших городов, где средняя зарплата составляет менее $250, а пенсия – $150. 
                     p Многие люди находятся на грани выживания и не могут позволить себе покупать дорогостоящие кошерные продукты. Часто их главная задача – просто выжить.  
                 .div2
+                  .geography__carousel
+                    div
+                      .geography__block
+                        img(src="./tmp/geography-img-1.png", alt="").img-fluid
+                        .geography__block-text 100 Общин, 250 городов
+                      .geography__city Россия
+                    div
+                      .geography__block
+                        img(src="./tmp/geography-img-2.png", alt="").img-fluid
+                        .geography__block-text 100 Общин, 250 городов
+                      .geography__city Беларусь
+                    div
+                      .geography__block
+                        img(src="./tmp/geography-img-1.png", alt="").img-fluid
+                        .geography__block-text 100 Общин, 250 городов
+                      .geography__city Россия
+                    div
+                      .geography__block
+                        img(src="./tmp/geography-img-2.png", alt="").img-fluid
+                        .geography__block-text 100 Общин, 250 городов
+                      .geography__city Беларусь
           // /end Geography
 
           // Results
@@ -178,6 +200,22 @@ html(lang="ru")
             .container
               .content__head
                 h2 Результаты проекта «Кошерный дом» за 2020 год 
+              .results__wrapper
+                .div1
+                  .results__block
+                    .results__block-head 2 000
+                    p Количество продуктовых наборов ежемесячно
+                .div2
+                  .results__block
+                    .results__block-head 4 000
+                    p Дополнительные праздничные наборы (Рош а-Шана, Ханука, Пурим, Песах) 
+                .div3
+                  .results__block
+                    .results__block-head 7 500
+                    p Дополнительные детские праздничные наборы (Рош а-Шана, Ханука, Пурим)
+                .div4
+                  .results__block.--last
+                    p К сожалению, сегодня этого недостаточно! Людей, нуждающихся в нашей помощи, стало намного больше. Только совместными усилиями мы сможем помочь всем!
           // /end Results
 
           // number
@@ -185,15 +223,33 @@ html(lang="ru")
             .container
               .content__head
                 h2 В 2021 году мы хотим увеличить количество ежемесячных благотворительных наборов с 2000 до 5000.
+              .number__wrapper
+                .div1
+                  .number__thumb
+                    img(src="./tmp/number-img-1.png", alt="")
+                .div2
+                  .number__content
+                    p Стоимость 1 продуктового набора - $50
+                    p
+                      strong Содержание кошерного продуктового набора: 
+                    ol
+                      li 2 курицы 
+                      li Куриная нарезка
+                      li Колбаса 
+                      li Сосиски
+                      li Вино или сок
+                      li Кондитерские изделия
+                    a(href="#!").btn Помочь
           // /end number
 
           // recommendation
           section#recommendation.recommendation
             .container
-              .content__head
-                h2
-                  span Рекомендации 
-                  | от раввинов
+              .recommendation__wrapper
+                .content__head
+                  h2
+                    span Рекомендации 
+                    | от раввинов
           // /end recommendation
 
           // form

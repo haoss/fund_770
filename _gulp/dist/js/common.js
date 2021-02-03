@@ -54,6 +54,16 @@ $(document).on('ready', function(){
     offset: '.header'
   });
 
+  $('ol li').each(function(){
+    var count = $(this).index() + 1;
+    $(this).prepend('<span class="span">' + count + '</span>');
+  });
+
+  $('.geography__carousel').slick({
+    mobileFirst: true,
+    fade: true
+  });
+
   phoneMask();
   mobileNav();
   inputFocus();

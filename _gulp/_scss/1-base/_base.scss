@@ -21,7 +21,7 @@ body {
   background: $color-white;
   font-size: rem(18px);
   font-family: $font-montserrat;
-  color: $primary-color;
+  color: $color-dark;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   @include media-breakpoint-up(sm) {
@@ -130,6 +130,10 @@ body {
       font-size: 40px;
       text-align: left;
       margin-bottom: 15px;
+    }
+    .number .content__head & {
+      font-size: 26px;
+      margin-bottom: 11px;
     }
   }
   @include media-breakpoint-up(md) {
