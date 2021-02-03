@@ -117,6 +117,15 @@ body {
   @include media-breakpoint-up(md) {
     font-size: 40px;
     margin-bottom: 45px;
+    .video .content__head & {
+      font-size: 50px;
+      span {
+        font-size: 26px;
+      }
+    }
+    .beneficiaries .content__head & {
+      margin-bottom: 20px;
+    }
   }
 }
 .h3, h3 {

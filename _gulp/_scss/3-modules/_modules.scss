@@ -65,7 +65,7 @@
       img {
         width: 1288px;
         height: 664px;
-        transform: translateX(-680px);
+        transform: translateX(-660px);
       }
     }
     &__head {
@@ -98,6 +98,10 @@
   }
   @include media-breakpoint-up(md) {
     padding-top: 95px;
+    background: {
+      size: 1336px;
+      position: 44% 40px;
+    }
   }
 }
 
@@ -175,13 +179,13 @@
       z-index: 10;
       width: 90px;
       height: 90px;
+      font-size: 26px;
       border-radius: 50%;
       background: $color-white;
       left: 0;
       bottom: -34px;
       box-shadow: 0px 4px 20px rgba($primary-color,.1);
       color: $color-brown;
-      font-size: 26px;
       text-align: center;
       &::before {
         position: absolute;
@@ -203,7 +207,7 @@
     padding-top: 120px;
     background: {
       image: url('../images/video-letter-bg.png');
-      position: 80% 0px;
+      position: 28% 40px;
       size: 1543px;
     };
     &__content {
@@ -226,6 +230,46 @@
         background-size: 791px 419px;
         bottom: auto;
         top: -30px;
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    background: {
+      size: 1446px;
+      position: 49% 90px;
+    };
+    &__content {
+      font-size: 16px;
+      max-width: 154px;
+    }
+    &__wrapper {
+      display: flex;
+      &>div {
+        &.div1 {
+          width: 200px;
+          flex-shrink: 0;
+          position: relative;
+          z-index: 5;
+        }
+        &.div2 {
+          flex-grow: 1;
+        }
+      }
+    }
+    &__div {
+      width: 620px;
+      margin-left: 0;
+      &-link {
+        width: 90px;
+        height: 90px;
+        font-size: 26px;
+        left: -30px;
+        bottom: -30px;
+      }
+      &::before {
+        width: 895px;
+        height: 474px;
+        background-size: 895px 474px;
       }
     }
   }
@@ -293,6 +337,20 @@
       p {
         max-width: 238px;
         margin-right: -38px;
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    padding-bottom: 70px;
+    &__row {
+      flex-wrap: nowrap;
+    }
+    &__block {
+      margin-bottom: 0;
+      &-thumb {
+        img {
+          height: 274px;
+        }
       }
     }
   }
