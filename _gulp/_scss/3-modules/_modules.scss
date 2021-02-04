@@ -1472,3 +1472,219 @@ ol {
     overflow: inherit;
   }
 }
+
+.direction {
+  position: relative;
+  padding-top: 125px;
+  padding-bottom: 189px;
+  background-color: $color-gray;
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 164px;
+    width: 1920px;
+    background: {
+      image: url('../images/money-wave-top.png');
+      repeat: no-repeat;
+      position: center top;
+      color: $color-white;
+    };
+  }
+  &::after {
+    top: auto;
+    bottom: 0;
+    background: {
+      image: url('../images/money-wave-bottom.png');
+    }
+  }
+  &>.container {
+    position: relative;
+    margin-top: -41px;
+    margin-bottom: -5px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &>div {
+      width: 290px;
+      &.div3 {
+        margin-top: 22px;
+      }
+    }
+  }
+  &__block {
+    font-size: 12px;
+    margin-bottom: 8px;
+    &-thumb {
+      position: relative;
+      margin-bottom: 24px;
+      padding-top: 48px;
+      width: 184px;
+      margin-right: 47px;
+      &::before {
+        content: '';
+        position: absolute;
+        background: url('../images/direction-img-bg.png') 0 0 no-repeat;
+        height: 318px;
+        width: 194px;
+        background-size: 194px 318px;
+        top: 0;
+        right: -47px;
+      }
+      img {
+        position: relative;
+        z-index: 5;
+        filter: drop-shadow(0px 6px 30px rgba($primary-color,.3));
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+    }
+    &-title {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+    }
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__content {
+    font-size: 14px;
+    font-style: italic;
+    padding: 25px 0 0 62px;
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    font-weight: 500;
+    &::before {
+      content: "\e906";
+      font-family: $font-icomoon;
+      position: absolute;
+      left: 15px;
+      top: -1px;
+      font-size: 96px;
+      line-height: 1;
+      font-style: normal;
+      color: $color-white;
+      z-index: -1;
+    }
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    padding-bottom: 170px;
+    &__wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+      &>div {
+        width: 50%;
+        &.div3 {
+          width: 100%;
+        }
+      }
+    }
+    &__block {
+      &-thumb {
+        padding-top: 56px;
+        width: 216px;
+        &::before {
+          height: 374px;
+          width: 229px;
+          background-size: 229px 374px;
+          right: -56px;
+          top: 0;
+        }
+        img {
+          width: 216px;
+          height: 279px;
+        }
+      }
+    }
+    &__content {
+      font-size: 16px;
+      padding-right: 57px;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    padding-bottom: 170px;
+    &__wrapper {
+      flex-wrap: nowrap;
+      &>div {
+        width: 50%;
+        &.div3 {
+          width: 300px;
+          flex-shrink: 0;
+        }
+      }
+    }
+    &__block {
+      &-thumb {
+        padding-top: 47px;
+        width: 184px;
+        &::before {
+          height: 310px;
+          width: 183px;
+          background-size: 183px 310px;
+          right: -47px;
+          top: 0;
+        }
+        img {
+          width: 184px;
+          height: 237px;
+        }
+      }
+    }
+    &__content {
+      margin-left: -80px;
+      font-size: 14px;
+      padding-right: 0px;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 123px;
+    padding-bottom: 210px;
+    &__wrapper {
+      &>div {
+        width: 50%;
+        &.div3 {
+          width: 460px;
+        }
+      }
+    }
+    &__block {
+      &-thumb {
+        padding-top: 56px;
+        width: 216px;
+        &::before {
+          height: 374px;
+          width: 229px;
+          background-size: 229px 374px;
+          right: -56px;
+        }
+        img {
+          width: 216px;
+          height: 279px;
+        }
+      }
+    }
+    &__content {
+      margin-left: -60px;
+      font-size: 16px;
+    }
+  }
+}
+
+.form {
+  padding-top: 90px;
+  padding-bottom: 10px;
+}

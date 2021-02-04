@@ -294,23 +294,156 @@ html(lang="ru")
                             .recommendation__persona-description Раввин московской синагоги на Большой Бронной. Руководитель объединения хасидов СНГ «Хабад-Любавич».
                         .recommendation__persona-bottom
                           .recommendation__persona-content
-                            p Вы любите своего ближнего не ради прославления собственного эго. Приходя на помощь своему брату или сестре, оставьте собственное «я» позади себя. Любите самоотверженно. Помогайте тому, кому вам не хочется помогать. Помогайте ему и научитесь хотеть оказывать ему помощь только потому, что это правильно. 
+                            p Вы любите своего ближнего не ради прославления собственного эго.
                           a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox).btn Смотреть видео
-
           // /end recommendation
 
           // form
           section#form.form
             .container
-              .content__head
-                h2 form
+              .form__wrapper
+                form(action="#!" novalidate autocomplete="off")
+                  fieldset
+                    .form__row
+                      .div1
+                        legend.form__legend Тип пожертвования
+                      .div2
+                        .form__type
+                          label.label-donate
+                            input(type='radio' name='type' checked)
+                            span Ежемесячное
+                          label.label-donate
+                            input(type='radio' name='type')
+                            span Рфзовое
+                        p.form__info Ежемесячное пожертвование списывается один раз в месяц с карты или PayPal. В любой момент вы сможете отключить его.
+                    .form__row
+                      .div1
+                        legend.form__legend Сумма пожертвования
+                      .div2
+                        .form__donate
+                          label.label-donate
+                            input(type='radio' name='donate' checked)
+                            span 100
+                          label.label-donate
+                            input(type='radio' name='donate')
+                            span 200
+                          label.label-donate
+                            input(type='radio' name='donate')
+                            span 500
+                          label.label-donate
+                            input(type='radio' name='donate')
+                            span 1000
+                          label.label-donate
+                            input(type='radio' name='donate')
+                            span 2500
+                          label.label-donate
+                            input(type='radio' name='donate')
+                            span 5000
+                          label.label-donate
+                            input(type='radio' name='donate')
+                            span 10000
+                          label.label-donate
+                            input(type='radio' name='donate')
+                            span 100000
+                          +field-text({
+                            title: '',
+                            hasJs: false,
+                            isTextarea: false,
+                            hasError: false,
+                            helpText: '',
+                            mods: '',
+                            val: '',
+                            attrs: {
+                              name: 'donate-custom',
+                              placeholder: 'Своя сумма',
+                              required: false,
+                              id: 'donate-custom'
+                            }
+                          })
+                    .form__row
+                      .div1
+                        legend.form__legend Представьтесь
+                      .div2
+                        .form__fields
+                          .div1
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'name',
+                                placeholder: 'Имя и Фамилия',
+                                required: true
+                              }
+                            })
+                          .div2
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'phone',
+                                placeholder: 'Телефон',
+                                required: true
+                              }
+                            })
+                          .div3
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'mail',
+                                placeholder: 'Email',
+                                required: true
+                              }
+                            })
+                        p Если вы хотите сделать пожертвование банковским переводом как юридическое лицо или наличными в нашем офисе, то свяжитесь с нами по телефону: 0 800 900 80 70
+                    .form__row
+                      .div1 &nbsp;
+                      .div2
+                        .form__bottom
+                          .div1
+                            label.label-checkbox
+                              input(type='checkbox' name='checkbox2' checked)
+                              span Согласен с 
+                                a(href="#!" target="_blank") офертой
+                          .div2
+                            button(type="submit").btn Помочь
           // /end form
 
           // direction
           section#direction.direction
             .container
-              .content__head
-                h2 direction
+              .direction__wrapper
+                .div1
+                  .direction__block
+                    .direction__block-thumb
+                      img(src="./tmp/direction-img-1.png", width="184", height="237", alt="")
+                    .direction__block-title Ребе Йеуда Давыдов 
+                    p Основатель фонда
+                .div2
+                  .direction__block
+                    .direction__block-thumb
+                      img(src="./tmp/direction-img-2.png", width="184", height="237", alt="")
+                    .direction__block-title Элина Ильясова
+                    p Директор фонда
+                .div3
+                  .direction__content
+                    p Наша семья – создатель и главный спонсор Фонда «770». Наша деятельность направлена на выполнение важной миссии: оказывать помощь евреям, которые в связи со сложными жизненными обстоятельствами не могут следовать законам Торы. 
+                    p Сегодня, из-за сложной экономической ситуации, количество наших подопечных постоянно  возрастает. Сейчас нам как никогда нужна ваша поддержка, чтобы протянуть руку помощи большему числу нуждающихся!
           // /end direction
 
           // family

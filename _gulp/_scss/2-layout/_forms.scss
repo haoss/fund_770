@@ -94,12 +94,12 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 }
 
 legend {
-  font-size: rem(16px);
+  font-size: rem(20px);
   display: block;
   border: 0;
-  line-height: 21px;
   margin-bottom: 10px;
-  color: $color-d-1;
+  font-weight: 800;
+  color: $color-dark;
 }
 
 .field-text {

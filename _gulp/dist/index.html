@@ -401,7 +401,7 @@
                                             </div>
                                             <div class="recommendation__persona-bottom">
                                                 <div class="recommendation__persona-content">
-                                                    <p>Вы любите своего ближнего не ради прославления собственного эго. Приходя на помощь своему брату или сестре, оставьте собственное «я» позади себя. Любите самоотверженно. Помогайте тому, кому вам не хочется помогать. Помогайте ему и научитесь хотеть оказывать ему помощь только потому, что это правильно. </p>
+                                                    <p>Вы любите своего ближнего не ради прославления собственного эго.</p>
                                                 </div><a class="btn" href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox>Смотреть видео</a>
                                             </div>
                                         </div>
@@ -415,8 +415,103 @@
                 <!-- form-->
                 <section class="form" id="form">
                     <div class="container">
-                        <div class="content__head">
-                            <h2>form</h2>
+                        <div class="form__wrapper">
+                            <form action="#!" novalidate autocomplete="off">
+                                <fieldset>
+                                    <div class="form__row">
+                                        <div class="div1">
+                                            <legend class="form__legend">Тип пожертвования</legend>
+                                        </div>
+                                        <div class="div2">
+                                            <div class="form__type">
+                                                <label class="label-donate">
+                                                    <input type="radio" name="type" checked><span>Ежемесячное</span>
+                                                </label>
+                                                <label class="label-donate">
+                                                    <input type="radio" name="type"><span>Рфзовое</span>
+                                                </label>
+                                            </div>
+                                            <p class="form__info">Ежемесячное пожертвование списывается один раз в месяц с карты или PayPal. В любой момент вы сможете отключить его.</p>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="div1">
+                                            <legend class="form__legend">Сумма пожертвования</legend>
+                                        </div>
+                                        <div class="div2">
+                                            <div class="form__donate">
+                                                <label class="label-donate">
+                                                    <input type="radio" name="donate" checked><span>100</span>
+                                                </label>
+                                                <label class="label-donate">
+                                                    <input type="radio" name="donate"><span>200</span>
+                                                </label>
+                                                <label class="label-donate">
+                                                    <input type="radio" name="donate"><span>500</span>
+                                                </label>
+                                                <label class="label-donate">
+                                                    <input type="radio" name="donate"><span>1000</span>
+                                                </label>
+                                                <label class="label-donate">
+                                                    <input type="radio" name="donate"><span>2500</span>
+                                                </label>
+                                                <label class="label-donate">
+                                                    <input type="radio" name="donate"><span>5000</span>
+                                                </label>
+                                                <label class="label-donate">
+                                                    <input type="radio" name="donate"><span>10000</span>
+                                                </label>
+                                                <label class="label-donate">
+                                                    <input type="radio" name="donate"><span>100000</span>
+                                                </label>
+                                                    <label class="field-text"><span class="field-text__input-wrap">
+                                                            <input class="field-text__input" type="text" value="" name="donate-custom" placeholder="Своя сумма" id="donate-custom"></span>
+                                                    </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="div1">
+                                            <legend class="form__legend">Представьтесь</legend>
+                                        </div>
+                                        <div class="div2">
+                                            <div class="form__fields">
+                                                <div class="div1">
+                                                        <label class="field-text"><span class="field-text__input-wrap">
+                                                                <input class="field-text__input" type="text" value="" name="name" placeholder="Имя и Фамилия" required></span>
+                                                        </label>
+                                                </div>
+                                                <div class="div2">
+                                                        <label class="field-text"><span class="field-text__input-wrap">
+                                                                <input class="field-text__input" type="text" value="" name="phone" placeholder="Телефон" required></span>
+                                                        </label>
+                                                </div>
+                                                <div class="div3">
+                                                        <label class="field-text"><span class="field-text__input-wrap">
+                                                                <input class="field-text__input" type="text" value="" name="mail" placeholder="Email" required></span>
+                                                        </label>
+                                                </div>
+                                            </div>
+                                            <p>Если вы хотите сделать пожертвование банковским переводом как юридическое лицо или наличными в нашем офисе, то свяжитесь с нами по телефону: 0 800 900 80 70</p>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="div1">&nbsp;</div>
+                                        <div class="div2">
+                                            <div class="form__bottom">
+                                                <div class="div1">
+                                                    <label class="label-checkbox">
+                                                        <input type="checkbox" name="checkbox2" checked><span>Согласен с <a href="#!" target="_blank">офертой</a></span>
+                                                    </label>
+                                                </div>
+                                                <div class="div2">
+                                                    <button class="btn" type="submit">Помочь</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
                         </div>
                     </div>
                 </section>
@@ -424,8 +519,27 @@
                 <!-- direction-->
                 <section class="direction" id="direction">
                     <div class="container">
-                        <div class="content__head">
-                            <h2>direction</h2>
+                        <div class="direction__wrapper">
+                            <div class="div1">
+                                <div class="direction__block">
+                                    <div class="direction__block-thumb"><img src="./tmp/direction-img-1.png" width="184" height="237" alt=""></div>
+                                    <div class="direction__block-title">Ребе Йеуда Давыдов </div>
+                                    <p>Основатель фонда</p>
+                                </div>
+                            </div>
+                            <div class="div2">
+                                <div class="direction__block">
+                                    <div class="direction__block-thumb"><img src="./tmp/direction-img-2.png" width="184" height="237" alt=""></div>
+                                    <div class="direction__block-title">Элина Ильясова</div>
+                                    <p>Директор фонда</p>
+                                </div>
+                            </div>
+                            <div class="div3">
+                                <div class="direction__content">
+                                    <p>Наша семья – создатель и главный спонсор Фонда «770». Наша деятельность направлена на выполнение важной миссии: оказывать помощь евреям, которые в связи со сложными жизненными обстоятельствами не могут следовать законам Торы. </p>
+                                    <p>Сегодня, из-за сложной экономической ситуации, количество наших подопечных постоянно  возрастает. Сейчас нам как никогда нужна ваша поддержка, чтобы протянуть руку помощи большему числу нуждающихся!</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
