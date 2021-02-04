@@ -1169,6 +1169,7 @@
 }
 
 .recommendation {
+  $this: &;
   position: relative;
   min-height: 300px;
   padding-top: 115px;
@@ -1183,7 +1184,7 @@
     height: 164px;
     width: 1920px;
     background: {
-      image: url('../images/money-wave-top.png');
+      image: url('../images/recommendation-wave-top.png');
       repeat: no-repeat;
       position: center top;
       color: $color-white;
@@ -1193,12 +1194,248 @@
     top: auto;
     bottom: 0;
     background: {
-      image: url('../images/money-wave-bottom.png');
+      image: url('../images/recommendation-wave-bottom.png');
     }
   }
   &__wrapper {
     position: relative;
     z-index: 5;
+  }
+  &__content {
+    margin-bottom: 35px;
+    font-size: 14px;
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    &-item {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: $color-dark;
+    &-thumb {
+      flex-shrink: 0;
+      width: 93px;
+      margin-right: 30px;
+      display: block;
+      opacity: 1;
+      transition: all 0.35s;
+      img {
+        max-width: 100%;
+        display: block;
+      }
+    }
+    &-name {
+      font-size: 18px;
+      font-weight: 800;
+      display: block;
+    }
+    &.active {
+      color: rgba($color-dark,.5);
+      #{$this} {
+        &__link {
+          &-name {
+            color: $color-brown;
+          }
+          &-thumb {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+  &__persona {
+    margin-top: -10px;
+    &-content {
+      margin-top: -28px;
+      background: $color-white;
+      font-size: 14px;
+      font-style: italic;
+      padding: 35px 35px 44px 44px;
+      position: relative;
+      z-index: 5;
+      overflow: hidden;
+      &::before {
+        content: "\e906";
+        font-family: $font-icomoon;
+        position: absolute;
+        left: 15px;
+        top: -1px;
+        font-size: 96px;
+        line-height: 1;
+        font-style: normal;
+        color: $color-gray;
+        z-index: -1;
+      }
+      p {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &-name {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+    &-description {
+      font-size: 12px;
+    }
+    &-top {
+      &>div {
+        &.div2 {
+          display: none;
+          padding-bottom: 45px;
+        }
+      }
+    }
+    &-bottom {
+      .btn {
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        width: 235px;
+        min-width: inherit;
+        display: block;
+        margin-top: -24px;
+        margin-left: 28px;
+        position: relative;
+        z-index: 6;
+      }
+    }
+    &-thumb {
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    &__content {
+      max-width: 464px;
+      font-size: 18px;
+    }
+    &__persona {
+      &-content {
+        margin-top: -42px;
+        &::before {
+          font-size: 130px;
+          left: 20px;
+        }
+        font-size: 16px;
+      }
+      &-thumb {
+        img {
+          width: 398px;
+          height: auto;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &__wrapper {
+      display: flex;
+      &>div {
+        &.div1 {
+          width: 423px;
+          flex-shrink: 0;
+          padding-top: 28px;
+        }
+        &.div2 {
+          flex-grow: 1;
+        }
+      }
+    }
+    &__content {
+      font-size: 14px;
+      margin-bottom: 38px;
+      max-width: 325px;
+    }
+    &__persona {
+      &-content {
+        margin-top: -36px;
+        &::before {
+          font-size: 96px;
+          left: 14px;
+        }
+        font-size: 14px;
+      }
+      &-thumb {
+        img {
+          width: 301px;
+          height: auto;
+        }
+      }
+      &-bottom {
+        .btn {
+          margin-left: 36px;
+        }
+      }
+      &-top {
+        display: flex;
+        align-items: center;
+        &>div {
+          &.div2 {
+            display: block;
+          }
+        }
+      }
+      &-thumb {
+        margin-left: -80px;
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 190px;
+    &__content {
+      font-size: 18px;
+    }
+    &__wrapper {
+      &>div {
+        &.div1 {
+          width: 587px;
+          padding-top: 35px;
+        }
+      }
+    }
+    &__persona {
+      &-thumb {
+        margin-left: -115px;
+        img {
+          width: 398px;
+        }
+      }
+      &-content {
+        margin-top: -42px;
+        &::before {
+          font-size: 130px;
+          left: 20px;
+        }
+        font-size: 16px;
+      }
+      &-bottom {
+        .btn {
+          margin-left: 42px;
+        }
+      }
+      &-description {
+        font-size: 14px;
+      }
+    }
   }
 }
 

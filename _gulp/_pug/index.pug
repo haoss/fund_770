@@ -135,7 +135,7 @@ html(lang="ru")
                 .div2
                   .video__div
                     img(src="./tmp/video-img.png", alt="")
-                    a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox="").video__div-link
+                    a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox).video__div-link
           // /end Video
 
           // Beneficiaries
@@ -251,27 +251,51 @@ html(lang="ru")
                     h2
                       span Рекомендации 
                       | от раввинов
-                  .recomendation__content
+                  .recommendation__content
                     p Мы работаем с раввинами из 50 еврейских общин России, Белорусси, Украины, Израиля
-                  ul.recomendation__list.nav.nav-tabs#myTab(role='tablist')
-                    li.recomendation__list-item(role='presentation')
-                      a.recomendation__link.active#tab1-tab(data-toggle='tab' href='#tab1-content' role='tab' aria-controls='tab1-content' aria-selected='true')
-                        span.recomendation__link-thumb
-                          img(src="./tmp/recomendation-img-1.png", alt="")
-                        span.recomendation__link-block
-                          span.recomendation__link-name Берл Лазар
-                          span.recomendation__link-desription Главный Раввин России
-                    li.recomendation__list-item(role='presentation')
-                      a.recomendation__list-link#tab2-tab(data-toggle='tab' href='#tab2-content' role='tab' aria-controls='tab2-content' aria-selected='false')
-                        span.recomendation__link-thumb
-                          img(src="./tmp/recomendation-img-1.png", alt="")
-                        span.recomendation__link-block
-                          span.recomendation__link-name Ицхак Коган 
-                          span.recomendation__link-desription Раввин
+                  ul.recommendation__list.nav.nav-tabs#myTab(role='tablist')
+                    li.recommendation__list-item(role='presentation')
+                      a.recommendation__link.active#tab1-tab(data-toggle='tab' href='#tab1-content' role='tab' aria-controls='tab1-content' aria-selected='true')
+                        span.recommendation__link-thumb
+                          img(src="./tmp/recomendation-img-1.png", width="93", height="74", alt="")
+                        span.recommendation__link-block
+                          span.recommendation__link-name Берл Лазар
+                          span.recommendation__link-desription Главный Раввин России
+                    li.recommendation__list-item(role='presentation')
+                      a.recommendation__link#tab2-tab(data-toggle='tab' href='#tab2-content' role='tab' aria-controls='tab2-content' aria-selected='false')
+                        span.recommendation__link-thumb
+                          img(src="./tmp/recomendation-img-1.png", width="93", height="74", alt="")
+                        span.recommendation__link-block
+                          span.recommendation__link-name Ицхак Коган 
+                          span.recommendation__link-desription Раввин
                 .div2
                   .tab-content
-                    .tab-pane.active#tab1-content(role='tabpanel' aria-labelledby='tab1-tab') 1
-                    .tab-pane#tab2-content(role='tabpanel' aria-labelledby='tab2-tab') 2
+                    .tab-pane.active#tab1-content(role='tabpanel' aria-labelledby='tab1-tab')
+                      .recommendation__persona
+                        .recommendation__persona-top
+                          .div1
+                            .recommendation__persona-thumb
+                              img(src="./tmp/recomendation-img-1.png", width="290", height="212", alt="")
+                          .div2
+                            .recommendation__persona-name Берл Лазар
+                            .recommendation__persona-description Раввин
+                        .recommendation__persona-bottom
+                          .recommendation__persona-content
+                            p Вы любите своего ближнего не ради прославления собственного эго. Приходя на помощь своему брату или сестре, оставьте собственное «я» позади себя. Любите самоотверженно. Помогайте тому, кому вам не хочется помогать. Помогайте ему и научитесь хотеть оказывать ему помощь только потому, что это правильно. 
+                          a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox).btn Смотреть видео
+                    .tab-pane#tab2-content(role='tabpanel' aria-labelledby='tab2-tab')
+                      .recommendation__persona
+                        .recommendation__persona-top
+                          .div1
+                            .recommendation__persona-thumb
+                              img(src="./tmp/recomendation-img-1.png", width="290", height="212", alt="")
+                          .div2
+                            .recommendation__persona-name Коган, Ицхак Абрамович
+                            .recommendation__persona-description Раввин московской синагоги на Большой Бронной. Руководитель объединения хасидов СНГ «Хабад-Любавич».
+                        .recommendation__persona-bottom
+                          .recommendation__persona-content
+                            p Вы любите своего ближнего не ради прославления собственного эго. Приходя на помощь своему брату или сестре, оставьте собственное «я» позади себя. Любите самоотверженно. Помогайте тому, кому вам не хочется помогать. Помогайте ему и научитесь хотеть оказывать ему помощь только потому, что это правильно. 
+                          a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox).btn Смотреть видео
 
           // /end recommendation
 

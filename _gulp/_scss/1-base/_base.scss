@@ -135,6 +135,13 @@ body {
       font-size: 26px;
       margin-bottom: 11px;
     }
+    .recommendation .content__head & {
+      font-size: 60px;
+      margin-bottom: 25px;
+      span {
+        font-style: 30px;
+      }
+    }
   }
   @include media-breakpoint-up(md) {
     font-size: 40px;
@@ -155,6 +162,13 @@ body {
     .number .content__head & {
       margin-bottom: 8px;
     }
+    .recommendation .content__head & {
+      font-size: 50px;
+      margin-bottom: 34px;
+      span {
+        font-style: 25px;
+      }
+    }
   }
   @include media-breakpoint-up(lg) {
     font-size: 50px;
@@ -172,6 +186,13 @@ body {
       font-size: 30px;
       margin-bottom: 11px;
       max-width: 1078px;
+    }
+    .recommendation .content__head & {
+      font-size: 60px;
+      margin-bottom: 25px;
+      span {
+        font-style: 30px;
+      }
     }
   }
 }
