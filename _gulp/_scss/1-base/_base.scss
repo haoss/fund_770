@@ -148,6 +148,13 @@ body {
     .beneficiaries .content__head & {
       margin-bottom: 20px;
     }
+    .geography .content__head & {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    .number .content__head & {
+      margin-bottom: 8px;
+    }
   }
   @include media-breakpoint-up(lg) {
     font-size: 50px;
@@ -157,6 +164,14 @@ body {
       span {
         font-size: 30px;
       }
+    }
+    .geography .content__head & {
+      margin-bottom: 32px;
+    }
+    .number .content__head & {
+      font-size: 30px;
+      margin-bottom: 11px;
+      max-width: 1078px;
     }
   }
 }

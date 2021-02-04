@@ -164,10 +164,10 @@ html(lang="ru")
           // Geography
           section#geography.geography
             .container
+              .content__head
+                h2 География нашей помощи
               .geography__wrapper
                 .div1
-                  .content__head
-                    h2 География нашей помощи
                   .geography__content
                     p.geography__description Фонд «770» оказывает помощь 50 еврейским общинам в 46 городах России и Белоруссии. Поддержка особенно нужна евреям из небольших городов, где средняя зарплата составляет менее $250, а пенсия – $150. 
                     p Многие люди находятся на грани выживания и не могут позволить себе покупать дорогостоящие кошерные продукты. Часто их главная задача – просто выжить.  
@@ -246,10 +246,33 @@ html(lang="ru")
           section#recommendation.recommendation
             .container
               .recommendation__wrapper
-                .content__head
-                  h2
-                    span Рекомендации 
-                    | от раввинов
+                .div1
+                  .content__head
+                    h2
+                      span Рекомендации 
+                      | от раввинов
+                  .recomendation__content
+                    p Мы работаем с раввинами из 50 еврейских общин России, Белорусси, Украины, Израиля
+                  ul.recomendation__list.nav.nav-tabs#myTab(role='tablist')
+                    li.recomendation__list-item(role='presentation')
+                      a.recomendation__link.active#tab1-tab(data-toggle='tab' href='#tab1-content' role='tab' aria-controls='tab1-content' aria-selected='true')
+                        span.recomendation__link-thumb
+                          img(src="./tmp/recomendation-img-1.png", alt="")
+                        span.recomendation__link-block
+                          span.recomendation__link-name Берл Лазар
+                          span.recomendation__link-desription Главный Раввин России
+                    li.recomendation__list-item(role='presentation')
+                      a.recomendation__list-link#tab2-tab(data-toggle='tab' href='#tab2-content' role='tab' aria-controls='tab2-content' aria-selected='false')
+                        span.recomendation__link-thumb
+                          img(src="./tmp/recomendation-img-1.png", alt="")
+                        span.recomendation__link-block
+                          span.recomendation__link-name Ицхак Коган 
+                          span.recomendation__link-desription Раввин
+                .div2
+                  .tab-content
+                    .tab-pane.active#tab1-content(role='tabpanel' aria-labelledby='tab1-tab') 1
+                    .tab-pane#tab2-content(role='tabpanel' aria-labelledby='tab2-tab') 2
+
           // /end recommendation
 
           // form

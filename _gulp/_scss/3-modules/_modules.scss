@@ -808,7 +808,7 @@
       image: url('../images/money-wave-bottom.png');
     }
   }
-  &__wrapper {
+  &>.container {
     position: relative;
   }
   &__content {
@@ -914,10 +914,73 @@
       }
     }
   }
+  @include media-breakpoint-up(md) {
+    padding-top: 140px;
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      &>div {
+        &.div2 {
+          width: 424px;
+          flex-shrink: 0;
+          margin-left: 30px;
+        }
+      }
+    }
+    &__content {
+      font-size: 14px;
+    }
+    &__description {
+      font-size: 16px;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 184px;
+    padding-bottom: 210px;
+    &__wrapper {
+      &>div {
+        &.div2 {
+          width: 640px;
+        }
+      }
+    }
+    &__content {
+      font-size: 16px;
+    }
+    &__description {
+      font-size: 20px;
+    }
+    &__carousel {
+      .slick-arrow {
+        &.slick-prev {
+          left: 97px;
+        }
+        &.slick-next {
+          right: 55px;
+        }
+      }
+    }
+  }
 }
 
 .results {
   padding-bottom: 118px;
+  position: relative;
+  &::before {
+    content: '\e916';
+    position: absolute;
+    font-size: 418px;
+    line-height: 1;
+    left: 37%;
+    top: 157px;
+    font-family: $font-icomoon;
+    opacity: 0.5;
+    color: $color-gray;
+  }
+  &>.container {
+    position: relative;
+    z-index: 5;
+  }
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -931,6 +994,7 @@
       font-weight: 900;
       line-height: 1;
       margin-bottom: 5px;
+      white-space: nowrap;
     }
     p {
       &:last-child {
@@ -953,10 +1017,77 @@
       }
     }
   }
+  @include media-breakpoint-up(md) {
+    padding-top: 50px;
+    background: {
+      image: url('../images/result-letter-bg.png');
+      position: 111% -10px;
+      size: 553px 433px;
+      repeat: no-repeat;
+    };
+    &::before {
+      font-size: 334px;
+      top: 70px;
+      left: 67%;
+    }
+    &__block {
+      font-size: 14px;
+      margin-bottom: 46px;
+      &-head {
+        font-size: 70px;
+      }
+      &.--last {
+        font-size: 16px;
+      }
+    }
+    &__wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+      &>div {
+        flex-basis: 210px;
+        padding-left: 30px;
+        &.div1 {
+          padding-left: 0;
+        }
+        &.div4 {
+          padding-left: 0;
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 72px;
+    background: {
+      size: 755px 591px;
+    };
+    &::before {
+      top: 45px;
+      left: 63%;
+    }
+    &__block {
+      font-size: 16px;
+      margin-bottom: 40px;
+      &.--last {
+        font-size: 18px;
+      }
+    }
+    &__wrapper {
+      &>div {
+        flex-basis: 28%;
+        &.div4 {
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
 }
 
 .number {
   padding-bottom: 50px;
+  &>.container {
+    position: relative;
+  }
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -971,14 +1102,68 @@
     }
   }
   &__content {
-    font-size: 18px;
-    ul {
-      font-size: 20px;
+    font-size: 14px;
+    ul, ol {
+      font-size: 18px;
+    }
+    .btn {
+      width: 100%;
+      max-width: 330px;
+    }
+    ol li>.span {
+      top: 5px;
     }
   }
   @include media-breakpoint-up(sm) {
     &__thumb {
       margin-bottom: 24px;
+    }
+    &__content {
+      font-size: 20px;
+      ul, ol {
+        font-size: 22px;
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &__wrapper {
+      flex-direction: row;
+      &>.div1 {
+        order: 2;
+      }
+      &>.div2 {
+        order: 1;
+        width: 453px;
+        flex-shrink: 0;
+        padding-top: 26px;
+      }
+    }
+    &__thumb {
+      width: 568px;
+    }
+    &__content {
+      font-size: 16px;
+      ul, ol {
+        font-size: 18px;
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 20px;
+    &__wrapper {
+      &>.div2 {
+        width: 568px;
+        padding-top: 23px;
+      }
+    }
+    &__thumb {
+      width: 811px;
+    }
+    &__content {
+      font-size: 20px;
+      ul, ol {
+        font-size: 22px;
+      }
     }
   }
 }
@@ -987,6 +1172,8 @@
   position: relative;
   min-height: 300px;
   padding-top: 115px;
+  padding-bottom: 164px;
+  background-color: $color-gray;
   &::before, &::after {
     content: '';
     position: absolute;
@@ -1011,6 +1198,7 @@
   }
   &__wrapper {
     position: relative;
+    z-index: 5;
   }
 }
 
@@ -1036,5 +1224,14 @@ ol {
       font-size: 14px;
       left: 22px;
     }
+  }
+}
+
+.tab-pane {
+  height: 0;
+  overflow: hidden;
+  &.active {
+    height: auto;
+    overflow: inherit;
   }
 }

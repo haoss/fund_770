@@ -248,11 +248,11 @@
                 <!-- Geography-->
                 <section class="geography" id="geography">
                     <div class="container">
+                        <div class="content__head">
+                            <h2>География нашей помощи</h2>
+                        </div>
                         <div class="geography__wrapper">
                             <div class="div1">
-                                <div class="content__head">
-                                    <h2>География нашей помощи</h2>
-                                </div>
                                 <div class="geography__content">
                                     <p class="geography__description">Фонд «770» оказывает помощь 50 еврейским общинам в 46 городах России и Белоруссии. Поддержка особенно нужна евреям из небольших городов, где средняя зарплата составляет менее $250, а пенсия – $150. </p>
                                     <p>Многие люди находятся на грани выживания и не могут позволить себе покупать дорогостоящие кошерные продукты. Часто их главная задача – просто выжить.  </p>
@@ -356,8 +356,23 @@
                 <section class="recommendation" id="recommendation">
                     <div class="container">
                         <div class="recommendation__wrapper">
-                            <div class="content__head">
-                                <h2><span>Рекомендации </span>от раввинов</h2>
+                            <div class="div1">
+                                <div class="content__head">
+                                    <h2><span>Рекомендации </span>от раввинов</h2>
+                                </div>
+                                <div class="recomendation__content">
+                                    <p>Мы работаем с раввинами из 50 еврейских общин России, Белорусси, Украины, Израиля</p>
+                                </div>
+                                <ul class="recomendation__list nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="recomendation__list-item" role="presentation"><a class="recomendation__link active" id="tab1-tab" data-toggle="tab" href="#tab1-content" role="tab" aria-controls="tab1-content" aria-selected="true"><span class="recomendation__link-thumb"><img src="./tmp/recomendation-img-1.png" alt=""></span><span class="recomendation__link-block"><span class="recomendation__link-name">Берл Лазар</span><span class="recomendation__link-desription">Главный Раввин России</span></span></a></li>
+                                    <li class="recomendation__list-item" role="presentation"><a class="recomendation__list-link" id="tab2-tab" data-toggle="tab" href="#tab2-content" role="tab" aria-controls="tab2-content" aria-selected="false"><span class="recomendation__link-thumb"><img src="./tmp/recomendation-img-1.png" alt=""></span><span class="recomendation__link-block"><span class="recomendation__link-name">Ицхак Коган </span><span class="recomendation__link-desription">Раввин</span></span></a></li>
+                                </ul>
+                            </div>
+                            <div class="div2">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab1-content" role="tabpanel" aria-labelledby="tab1-tab">1</div>
+                                    <div class="tab-pane" id="tab2-content" role="tabpanel" aria-labelledby="tab2-tab">2</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -410,6 +425,7 @@
         <script src="./js/libs/jquery.malihu.PageScroll2id.min.js"></script>
         <script src="./js/libs/jquery.validate.min.js"></script>
         <script src="./js/libs/fancybox/jquery.fancybox.min.js"></script>
+        <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
         <script src="./js/common.js"></script>
         <script>
             $(document).on('ready', function(){
