@@ -34,7 +34,47 @@ $(document).on('ready', function(){
     showCloseBtn: false,
     callbacks: {
       open: function() {
-        $('.carousel-two').slick('reinit');
+        var $slider1 = $('.carousel-one');
+        var $slider2 = $('.carousel-two');
+
+        if (!$slider1.hasClass('slick-initialized')) {
+          $slider1.slick({
+            mobileFirst: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: '.carousel-two',
+            dots: false,
+            centerMode: false,
+            focusOnSelect: true,
+            vertical: true,
+            touchMove: false,
+            arrows: false,
+            centerPadding: '0px'
+          });
+        }
+        if (!$slider2.hasClass('slick-initialized')) {
+          $slider2.slick({
+            mobileFirst: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            fade: true,
+            dots: true,
+            cssEase: 'linear',
+            asNavFor: '.carousel-one',
+            responsive: [
+              {
+                breakpoint: 1300,
+                settings: {
+                  dots: false
+                }
+              }
+            ]
+          });
+        }
+
+        $slider1.slick('slickGoTo', +$(this).attr('index'));
+        $slider2.slick('slickGoTo', +$(this).attr('index'));
       },
     }
   });
@@ -114,7 +154,6 @@ $(document).on('ready', function(){
   oneCarousel();
   activeLang();
   donatePayment();
-  modalGallery();
 
   // Chrome Smooth Scroll
   try {
@@ -369,11 +408,5 @@ function donatePayment() {
 
   row.find('input[type="radio"]').on('click', function(){
     input.val('');
-  });
-}
-
-function modalGallery() {
-  $('.carousel-two').slick({
-
   });
 }
