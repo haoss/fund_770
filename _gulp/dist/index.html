@@ -18,6 +18,67 @@
     <body>
         <div class="base">
             <!-- Preloader-->
+            <div class="modal mfp-hide" id="modal">
+                <button class="modal__close j-modal-close" type="button"></button>
+                <div class="modal__wrapper text-center">
+                    <div class="modal__text"> 
+                        <div class="modal__text-title">Спасибо</div>
+                        <p>Спасибо за ваши деньги, они нам очень нужны!</p>
+                    </div>
+                        <button class="btn  --success j-modal-close" type="button">Помочь еще
+                        </button>
+                </div>
+            </div>
+            <div class="modal --gallery mfp-hide" id="gallery">
+                <button class="modal__close j-modal-close" type="button"></button>
+                <div class="modal__wrapper">
+                    <div class="modal__title">Наша миссия</div>
+                    <div class="container">
+                        <div class="modal__gallery">
+                            <div class="modal__gallery-left">
+                                <div class="carousel-one">
+                                    <div>
+                                        <div class="carousel-one__block"><img src="./tmp/family-img-big.png" width="93" alt=""></div>
+                                    </div>
+                                    <div>
+                                        <div class="carousel-one__block"><img src="./tmp/family-img-big.png" width="93" alt=""></div>
+                                    </div>
+                                    <div>
+                                        <div class="carousel-one__block"><img src="./tmp/family-img-big.png" width="93" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal__gallery-center">
+                                <div class="carousel-two">
+                                    <div>
+                                        <div class="carousel-two__block"><img src="./tmp/family-img-big.png" alt=""></div>
+                                    </div>
+                                    <div>
+                                        <div class="carousel-two__block"><img src="./tmp/family-img-big.png" alt=""></div>
+                                    </div>
+                                    <div>
+                                        <div class="carousel-two__block"><img src="./tmp/family-img-big.png" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__content">
+                            <p>Частный благотворительный Фонд «770» ведет свою деятельность с 2018 благодаря финансовой помощи группы бизнесменов. </p>
+                            <p>«Кошерный дом» - флагманский проект фонда. Он направлен на помощь тысячам евреев, которые находятся за чертой бедности и не могут позволить себе купить кошерные продукты. В наших с вами силах не допустить, чтобы из-за финансовых проблем евреи отказывались от исполнения важной заповеди, от своих корней и в итоге отходили от Торы. </p>
+                            <div class="modal__video"><img src="./tmp/family-img-big.png" alt=""><a class="modal__video-link" href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox></a></div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="family__history">
+                            <div class="family__history-number">
+                                <div class="div1">03</div>
+                                <div class="div2">Еще одна история о безвоздмездной помощи нашего фонда</div>
+                            </div>
+                            <div class="family__history-title">История семьи Мойши </div>
+                            <div class="family__btns"><a class="family__btns-prev" href="#!"></a><a class="family__btns-next" href="#!"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Header-->
             <header class="header">
                 <div class="container">
@@ -66,7 +127,7 @@
                         <h1>Кошерная <span>продуктовая помощь евреям СНГ</span></h1>
                     </div>
                     <div class="top-screen__content">
-                        <p>Если из-за бедности еврей перестаёт быть евреем, не соблюдая кашрут, весь мир обязан протянуть ему руку помощи</p><a class="btn" href="#!">Оказать помощь</a>
+                        <p>Если из-за бедности еврей перестаёт быть евреем, не соблюдая кашрут, весь мир обязан протянуть ему руку помощи</p><a class="btn j-anchor" href="#form">Оказать помощь</a>
                     </div>
                 </div>
             </section>
@@ -345,7 +406,7 @@
                                         <li>Сосиски</li>
                                         <li>Вино или сок</li>
                                         <li>Кондитерские изделия</li>
-                                    </ol><a class="btn" href="#!">Помочь</a>
+                                    </ol><a class="btn j-anchor" href="#form">Помочь</a>
                                 </div>
                             </div>
                         </div>
@@ -418,7 +479,7 @@
                         <div class="form__wrapper">
                             <form action="#!" novalidate autocomplete="off">
                                 <fieldset>
-                                    <div class="form__row">
+                                    <div class="form__row --first">
                                         <div class="div1">
                                             <legend class="form__legend">Тип пожертвования</legend>
                                         </div>
@@ -428,7 +489,7 @@
                                                     <input type="radio" name="type" checked><span>Ежемесячное</span>
                                                 </label>
                                                 <label class="label-donate">
-                                                    <input type="radio" name="type"><span>Рфзовое</span>
+                                                    <input type="radio" name="type"><span>Разовое</span>
                                                 </label>
                                             </div>
                                             <p class="form__info">Ежемесячное пожертвование списывается один раз в месяц с карты или PayPal. В любой момент вы сможете отключить его.</p>
@@ -439,33 +500,33 @@
                                             <legend class="form__legend">Сумма пожертвования</legend>
                                         </div>
                                         <div class="div2">
-                                            <div class="form__donate">
+                                            <div class="form__donate" id="form__donate">
                                                 <label class="label-donate">
-                                                    <input type="radio" name="donate" checked><span>100</span>
+                                                    <input type="radio" name="donate"><span class="j-donate-num">100 <i class="icon-rouble"></i></span>
                                                 </label>
                                                 <label class="label-donate">
-                                                    <input type="radio" name="donate"><span>200</span>
+                                                    <input type="radio" name="donate"><span class="j-donate-num">200 <i class="icon-rouble"></i></span>
                                                 </label>
                                                 <label class="label-donate">
-                                                    <input type="radio" name="donate"><span>500</span>
+                                                    <input type="radio" name="donate" checked><span class="j-donate-num">500 <i class="icon-rouble"></i></span>
                                                 </label>
                                                 <label class="label-donate">
-                                                    <input type="radio" name="donate"><span>1000</span>
+                                                    <input type="radio" name="donate"><span class="j-donate-num">1000 <i class="icon-rouble"></i></span>
                                                 </label>
                                                 <label class="label-donate">
-                                                    <input type="radio" name="donate"><span>2500</span>
+                                                    <input type="radio" name="donate"><span class="j-donate-num">2500 <i class="icon-rouble"></i></span>
                                                 </label>
                                                 <label class="label-donate">
-                                                    <input type="radio" name="donate"><span>5000</span>
+                                                    <input type="radio" name="donate"><span class="j-donate-num">5000 <i class="icon-rouble"></i></span>
                                                 </label>
                                                 <label class="label-donate">
-                                                    <input type="radio" name="donate"><span>10000</span>
+                                                    <input type="radio" name="donate"><span class="j-donate-num">10000 <i class="icon-rouble"></i></span>
                                                 </label>
                                                 <label class="label-donate">
-                                                    <input type="radio" name="donate"><span>100000</span>
+                                                    <input type="radio" name="donate"><span class="j-donate-num">100000 <i class="icon-rouble"></i></span>
                                                 </label>
-                                                    <label class="field-text"><span class="field-text__input-wrap">
-                                                            <input class="field-text__input" type="text" value="" name="donate-custom" placeholder="Своя сумма" id="donate-custom"></span>
+                                                    <label class="field-text --has-icon"><span class="field-text__input-wrap">
+                                                            <input class="field-text__input" type="text" value="" name="donate-custom" placeholder="Другая сумма" id="donate-custom"><i class="icon-rouble"></i></span>
                                                     </label>
                                             </div>
                                         </div>
@@ -483,7 +544,7 @@
                                                 </div>
                                                 <div class="div2">
                                                         <label class="field-text"><span class="field-text__input-wrap">
-                                                                <input class="field-text__input" type="text" value="" name="phone" placeholder="Телефон" required></span>
+                                                                <input class="field-text__input j-phone-mask" type="text" value="" name="phone" placeholder="Телефон" required></span>
                                                         </label>
                                                 </div>
                                                 <div class="div3">
@@ -492,21 +553,22 @@
                                                         </label>
                                                 </div>
                                             </div>
-                                            <p>Если вы хотите сделать пожертвование банковским переводом как юридическое лицо или наличными в нашем офисе, то свяжитесь с нами по телефону: 0 800 900 80 70</p>
+                                            <p class="form__info --fs14">Если вы хотите сделать пожертвование банковским переводом как юридическое лицо или наличными в нашем офисе, то свяжитесь с нами по телефону: <a href="tel:"><b>0 800 900 80 70</b></a></p>
                                         </div>
                                     </div>
-                                    <div class="form__row">
+                                    <div class="form__row --last">
                                         <div class="div1">&nbsp;</div>
                                         <div class="div2">
                                             <div class="form__bottom">
                                                 <div class="div1">
-                                                    <label class="label-checkbox">
-                                                        <input type="checkbox" name="checkbox2" checked><span>Согласен с <a href="#!" target="_blank">офертой</a></span>
-                                                    </label>
+                                                        <label class="field-checkbox">
+                                                            <input class="field-checkbox__input" type="checkbox" name="checkbox" checked><span class="field-checkbox__span-input"></span><span class="field-checkbox__label">Согласен с <a href="#!" target="_blank">офертой</a></span>
+                                                        </label>
                                                 </div>
                                                 <div class="div2">
-                                                    <button class="btn" type="submit">Помочь</button>
+                                                    <button class="btn j-modal-test" type="submit">Помочь</button>
                                                 </div>
+                                                <div class="div3"><img src="./tmp/platron.png" alt=""></div>
                                             </div>
                                         </div>
                                     </div>
@@ -547,8 +609,55 @@
                 <!-- family-->
                 <section class="family" id="family">
                     <div class="container">
-                        <div class="content__head">
-                            <h2>family</h2>
+                        <div class="family__wrapper">
+                            <div class="div1">
+                                <div class="family__title">Сделав пожертвование и оставив свой e-mail, вы будете ежемесячно получать отчет о нашей деятельности.</div>
+                                <div class="family__content">
+                                    <p>А это фотографии подопечных, получивших продуктовые наборы, данные о количестве розданных наборов, информацию о потраченных средствах.</p>
+                                </div>
+                                <div class="family__history">
+                                    <div class="family__history-number">
+                                        <div class="div1">03</div>
+                                        <div class="div2">Еще одна история о безвоздмездной помощи нашего фонда</div>
+                                    </div>
+                                    <div class="family__history-title">История семьи Мойши </div>
+                                    <div class="family__btns"><a class="family__btns-prev" href="#!"></a><a class="family__btns-next" href="#!"></a></div>
+                                </div>
+                            </div>
+                            <div class="div2">
+                                <div class="family__about">
+                                    <div class="family__about-thumb"><img src="./tmp/family-img-1.png" alt=""></div>
+                                    <div class="family__about-title">Семья Мойши Абрамовича</div>
+                                    <p>Небольшая молодая семья в Бейт-Шемеше</p>
+                                </div><a class="btn open-popup-link" href="#gallery">Фотоотчет</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- /end family-->
+                <!-- help-->
+                <section class="help" id="help">
+                    <div class="container">
+                        <div class="help__title">Важна любая помощь</div>
+                        <div class="help__content">
+                            <p>Расскажите о Фонде и его проекте своим друзьям</p>
+                        </div>
+                        <div class="help__wrapper">
+                            <div class="div1">
+                                <div class="help__social">
+                                    <div><a href="#!" target="_blank"><i class="icon-facebook"></i><span class="span">Facebook</span></a></div>
+                                    <div><a href="#!" target="_blank"><i class="icon-vk"></i><span class="span">Вконтакте</span></a></div>
+                                    <div><a href="#!" target="_blank"><i class="icon-telegram"></i><span class="span">Тelegram</span></a></div>
+                                    <div><a href="#!" target="_blank"><i class="icon-whatsapp"><span class="path1"></span><span class="path2"></span></i><span class="span">Whatsapp</span></a></div>
+                                    <div><a href="#!" target="_blank"><i class="icon-email"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span></i><span class="span">Gmail </span></a></div>
+                                </div>
+                            </div>
+                            <div class="div2">
+                                <div class="help__number">
+                                    <div class="div1">73к</div>
+                                    <div class="div2">Именно столько людей уже поддержали добрые начинания и тем самым помогли расширить круг помощи нуждающимся</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -557,10 +666,12 @@
             <!-- Footer-->
             <footer class="footer">
                 <div class="container">
-                    <div>&copy; 2018</div>
+                    <div class="footer__wrapper">
+                        <div class="div1">Copyright ©2021. <br>Благотворительного фонда 770</div>
+                        <div class="div2">Создание и поддержка в студии <a href="#!" target="_blank">Piarme</a></div>
+                    </div>
                 </div>
             </footer>
-            <div style="height: 1000px; background-color: #000"></div>
         </div>
         <!-- Load Scripts-->
         <!-- Footer js-->
@@ -574,6 +685,7 @@
         <script src="./js/libs/jquery.validate.min.js"></script>
         <script src="./js/libs/fancybox/jquery.fancybox.min.js"></script>
         <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="./js/libs/wNumb.min.js"></script>
         <script src="./js/common.js"></script>
         <script>
             $(document).on('ready', function(){

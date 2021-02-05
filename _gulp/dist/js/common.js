@@ -3,6 +3,21 @@
 // Document ready
 $(document).on('ready', function(){
 
+  var numFormat = wNumb({
+    thousand: ' '
+  });
+
+  $('.j-donate-num').each(function () {
+    $(this).html(numFormat.to(parseInt($(this).text())) + ' <i class="icon-rouble"></i>');
+  });
+
+  $('#donate-custom').on('input blur', function(){
+    this.value = this.value.replace(/\D/g,'');
+    if ($(this).val()) {
+      $(this).val(numFormat.to(parseInt($(this).val())));
+    }
+  });
+
   // Magnific popup video
   $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
     disableOn: 700,
@@ -15,7 +30,13 @@ $(document).on('ready', function(){
 
   $('.open-popup-link').magnificPopup({
     type: 'inline',
-    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    midClick: true,
+    showCloseBtn: false,
+    callbacks: {
+      open: function() {
+        $('.carousel-two').slick('reinit');
+      },
+    }
   });
 
   $("form").each(function(){
@@ -64,12 +85,36 @@ $(document).on('ready', function(){
     fade: true
   });
 
+  $("a[href*='#'].j-anchor").mPageScroll2id({
+    offset: '.header'
+  });
+
+  $('.j-modal-test').on('click', function(){
+    setTimeout(function(){
+      $.magnificPopup.open({
+        showCloseBtn: false,
+        items: {
+          src: '#modal'
+        },
+        type: 'inline'
+      })
+    }, 3000)
+  });
+  $('.j-modal-close').on('click', function(){
+    $.magnificPopup.close();
+  });
+  $('[data-fancybox]').on('click', function(){
+    $.magnificPopup.close();
+  });
+
   phoneMask();
   mobileNav();
   inputFocus();
   headerScroll();
   oneCarousel();
   activeLang();
+  donatePayment();
+  modalGallery();
 
   // Chrome Smooth Scroll
   try {
@@ -312,4 +357,23 @@ function oneCarousel() {
       $slickElement.slick('unslick');
     }
   }
+}
+
+function donatePayment() {
+  var input = $('#donate-custom');
+  var row = $('#form__donate');
+
+  input.on('click', function(e){
+    row.find('input[type="radio"]').prop("checked", false);
+  });
+
+  row.find('input[type="radio"]').on('click', function(){
+    input.val('');
+  });
+}
+
+function modalGallery() {
+  $('.carousel-two').slick({
+
+  });
 }

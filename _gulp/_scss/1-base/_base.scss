@@ -1,6 +1,7 @@
 /* base */
 *, *:before, *:after {
   box-sizing: border-box;
+  caret-color: transparent;
 }
 
 // Basic Styles
@@ -243,7 +244,7 @@ a, .link {
   text-decoration: underline;
   outline: none;
   transition: color 0.35s, background 0.35s, border 0.35s;
-  &:hover, &:focus, &:active {
+  &:hover {
     color: $link-color;
     text-decoration: none;
     outline: none;
@@ -251,7 +252,7 @@ a, .link {
 }
 
 a.link {
-  &:hover, &:focus, &:active {
+  &:hover {
     text-decoration: none;
   }
 }
@@ -355,13 +356,13 @@ ol li {
 
 /* bg */
 .bg {
-  &--pink {
+  &.--pink {
     background-color: pink !important;
   }
-  &--white {
+  &.--white {
     background-color: $color-white !important;
   }
-  &--black {
+  &.--black {
     background-color: $primary-color !important;
   }
 }
@@ -418,10 +419,10 @@ ol li {
 
 /* color */
 .color {
-  &--black {
+  &.--black {
     color: $primary-color !important;
   }
-  &--white {
+  &.--white {
     color: $color-white !important;
   }
 }

@@ -1,4 +1,70 @@
 /* footer */
 .footer {
   background-color: $color-gray;
+  padding-top: 116px;
+  padding-bottom: 24px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-600px);
+    height: 164px;
+    width: 1920px;
+    background: {
+      image: url('../images/recommendation-wave-top.png');
+      repeat: repeat-x;
+      position: center top;
+      color: $color-white;
+    };
+  }
+  &__wrapper {
+    position: relative;
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba($color-dark,.5);
+    a {
+      color: rgba($color-dark,.5);
+      text-decoration: none;
+      &:hover {
+        color: rgba($color-dark,.5);
+        text-decoration: underline;
+      }
+    }
+    &>div {
+      &.div2 {
+        padding-top: 10px;
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    padding-bottom: 15px;
+    background-position: center top;
+    background-size: 1618px;
+    padding-top: 140px;
+    &::before {
+      transform: translateX(-50%);
+    }
+    &__wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      &>div {
+        &.div1 {
+          br {
+            display: none;
+          }
+        }
+        &.div2 {
+          padding-top: 0;
+        }
+      }
+    }
+    
+  }
 }

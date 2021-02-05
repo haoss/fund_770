@@ -3,3 +3,56 @@
 //-     div
 //-     div
 //-     div
+
+#modal.modal.mfp-hide
+  button(type="button").modal__close.j-modal-close
+  .modal__wrapper.text-center
+    .modal__text 
+      .modal__text-title Спасибо
+      p Спасибо за ваши деньги, они нам очень нужны!
+    +btn('Помочь еще', 'success').j-modal-close
+
+#gallery.modal.--gallery.mfp-hide
+  button(type="button").modal__close.j-modal-close
+  .modal__wrapper
+    .modal__title Наша миссия
+    .container
+      .modal__gallery
+        .modal__gallery-left
+          .carousel-one
+            div
+              .carousel-one__block
+                img(src="./tmp/family-img-big.png", width="93", alt="")
+            div
+              .carousel-one__block
+                img(src="./tmp/family-img-big.png", width="93", alt="")
+            div
+              .carousel-one__block
+                img(src="./tmp/family-img-big.png", width="93", alt="")
+        .modal__gallery-center
+          .carousel-two
+            div
+              .carousel-two__block
+                img(src="./tmp/family-img-big.png", alt="")
+            div
+              .carousel-two__block
+                img(src="./tmp/family-img-big.png", alt="")
+            div
+              .carousel-two__block
+                img(src="./tmp/family-img-big.png", alt="")
+
+      .modal__content
+        p Частный благотворительный Фонд «770» ведет свою деятельность с 2018 благодаря финансовой помощи группы бизнесменов. 
+        p «Кошерный дом» - флагманский проект фонда. Он направлен на помощь тысячам евреев, которые находятся за чертой бедности и не могут позволить себе купить кошерные продукты. В наших с вами силах не допустить, чтобы из-за финансовых проблем евреи отказывались от исполнения важной заповеди, от своих корней и в итоге отходили от Торы. 
+        .modal__video
+          img(src="./tmp/family-img-big.png", alt="")
+          a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox).modal__video-link
+      .clear
+      .family__history
+        .family__history-number
+          .div1 03
+          .div2 Еще одна история о безвоздмездной помощи нашего фонда
+        .family__history-title История семьи Мойши 
+        .family__btns
+          a(href="#!").family__btns-prev
+          a(href="#!").family__btns-next

@@ -31,7 +31,7 @@ html(lang="ru")
               span продуктовая помощь евреям СНГ
           .top-screen__content
             p Если из-за бедности еврей перестаёт быть евреем, не соблюдая кашрут, весь мир обязан протянуть ему руку помощи
-            +btn('Оказать помощь')(href='#!')
+            +btn('Оказать помощь')(href='#form').j-anchor
 
       // Content
       .content
@@ -239,7 +239,7 @@ html(lang="ru")
                       li Сосиски
                       li Вино или сок
                       li Кондитерские изделия
-                    a(href="#!").btn Помочь
+                    a(href='#form').btn.j-anchor Помочь
           // /end number
 
           // recommendation
@@ -304,7 +304,7 @@ html(lang="ru")
               .form__wrapper
                 form(action="#!" novalidate autocomplete="off")
                   fieldset
-                    .form__row
+                    .form__row.--first
                       .div1
                         legend.form__legend Тип пожертвования
                       .div2
@@ -314,37 +314,45 @@ html(lang="ru")
                             span Ежемесячное
                           label.label-donate
                             input(type='radio' name='type')
-                            span Рфзовое
+                            span Разовое
                         p.form__info Ежемесячное пожертвование списывается один раз в месяц с карты или PayPal. В любой момент вы сможете отключить его.
                     .form__row
                       .div1
                         legend.form__legend Сумма пожертвования
                       .div2
-                        .form__donate
+                        .form__donate#form__donate
+                          label.label-donate
+                            input(type='radio' name='donate')
+                            span.j-donate-num 100 
+                              i.icon-rouble
+                          label.label-donate
+                            input(type='radio' name='donate')
+                            span.j-donate-num 200 
+                              i.icon-rouble
                           label.label-donate
                             input(type='radio' name='donate' checked)
-                            span 100
+                            span.j-donate-num 500 
+                              i.icon-rouble
                           label.label-donate
                             input(type='radio' name='donate')
-                            span 200
+                            span.j-donate-num 1000 
+                              i.icon-rouble
                           label.label-donate
                             input(type='radio' name='donate')
-                            span 500
+                            span.j-donate-num 2500 
+                              i.icon-rouble
                           label.label-donate
                             input(type='radio' name='donate')
-                            span 1000
+                            span.j-donate-num 5000 
+                              i.icon-rouble
                           label.label-donate
                             input(type='radio' name='donate')
-                            span 2500
+                            span.j-donate-num 10000 
+                              i.icon-rouble
                           label.label-donate
                             input(type='radio' name='donate')
-                            span 5000
-                          label.label-donate
-                            input(type='radio' name='donate')
-                            span 10000
-                          label.label-donate
-                            input(type='radio' name='donate')
-                            span 100000
+                            span.j-donate-num 100000 
+                              i.icon-rouble
                           +field-text({
                             title: '',
                             hasJs: false,
@@ -354,12 +362,14 @@ html(lang="ru")
                             mods: '',
                             val: '',
                             attrs: {
+                              type: 'text',
                               name: 'donate-custom',
-                              placeholder: 'Своя сумма',
+                              placeholder: 'Другая сумма',
                               required: false,
                               id: 'donate-custom'
                             }
-                          })
+                          }).--has-icon
+                            i.icon-rouble
                     .form__row
                       .div1
                         legend.form__legend Представьтесь
@@ -392,7 +402,8 @@ html(lang="ru")
                               attrs: {
                                 name: 'phone',
                                 placeholder: 'Телефон',
-                                required: true
+                                required: true,
+                                class: 'j-phone-mask'
                               }
                             })
                           .div3
@@ -410,18 +421,27 @@ html(lang="ru")
                                 required: true
                               }
                             })
-                        p Если вы хотите сделать пожертвование банковским переводом как юридическое лицо или наличными в нашем офисе, то свяжитесь с нами по телефону: 0 800 900 80 70
-                    .form__row
+                        p.form__info.--fs14 Если вы хотите сделать пожертвование банковским переводом как юридическое лицо или наличными в нашем офисе, то свяжитесь с нами по телефону: 
+                          a(href="tel:")
+                            b 0 800 900 80 70
+                    .form__row.--last
                       .div1 &nbsp;
                       .div2
                         .form__bottom
                           .div1
-                            label.label-checkbox
-                              input(type='checkbox' name='checkbox2' checked)
-                              span Согласен с 
-                                a(href="#!" target="_blank") офертой
+                            +field-checkbox({
+                              title: 'Согласен с <a href="#!" target="_blank">офертой</a>',
+                              isLink: false,
+                              mods: '',
+                              attrs: {
+                                name: 'checkbox',
+                                checked: true,
+                              }
+                            })
                           .div2
-                            button(type="submit").btn Помочь
+                            button(type="submit").btn.j-modal-test Помочь
+                          .div3
+                            img(src="./tmp/platron.png", alt="")
           // /end form
 
           // direction
@@ -449,12 +469,76 @@ html(lang="ru")
           // family
           section#family.family
             .container
-              .content__head
-                h2 family
+              .family__wrapper
+                .div1
+                  .family__title Сделав пожертвование и оставив свой e-mail, вы будете ежемесячно получать отчет о нашей деятельности.
+                  .family__content
+                    p А это фотографии подопечных, получивших продуктовые наборы, данные о количестве розданных наборов, информацию о потраченных средствах.
+                  .family__history
+                    .family__history-number
+                      .div1 03
+                      .div2 Еще одна история о безвоздмездной помощи нашего фонда
+                    .family__history-title История семьи Мойши 
+                    .family__btns
+                      a(href="#!").family__btns-prev
+                      a(href="#!").family__btns-next
+                .div2
+                  .family__about
+                    .family__about-thumb
+                      img(src="./tmp/family-img-1.png", alt="")
+                    .family__about-title Семья Мойши Абрамовича
+                    p Небольшая молодая семья в Бейт-Шемеше
+                  a(href="#gallery").btn.open-popup-link Фотоотчет
+          // /end family
+
+          // help
+          section#help.help
+            .container
+              .help__title Важна любая помощь
+              .help__content
+                p Расскажите о Фонде и его проекте своим друзьям
+              .help__wrapper
+                .div1
+                  .help__social
+                    div
+                      a(href="#!" target="_blank")
+                        i.icon-facebook
+                        span.span Facebook
+                    div
+                      a(href="#!" target="_blank")
+                        i.icon-vk
+                        span.span Вконтакте
+                    div
+                      a(href="#!" target="_blank")
+                        i.icon-telegram
+                        span.span Тelegram
+                    div
+                      a(href="#!" target="_blank")
+                        i.icon-whatsapp
+                          span.path1
+                          span.path2
+                        span.span Whatsapp
+                    div
+                      a(href="#!" target="_blank")
+                        i.icon-email
+                          span.path1
+                          span.path2
+                          span.path3
+                          span.path4
+                          span.path5
+                          span.path6
+                          span.path7
+                          span.path8
+                          span.path9
+                        span.span Gmail 
+                .div2
+                  .help__number
+                    .div1 73к
+                    .div2 Именно столько людей уже поддержали добрые начинания и тем самым помогли расширить круг помощи нуждающимся
           // /end family
 
       include ./_include/_footer
-      div(style="height: 1000px; background-color: #000")
+      //- div(style="height: 1000px; background-color: #000")
 
     // Load Scripts
     include ./_include/_footer-js
