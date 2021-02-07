@@ -12,7 +12,7 @@
         <meta name="format-detection" content="email=no">
         <meta content="notranslate" name="google">
         <link rel="stylesheet" href="./js/libs/fancybox/jquery.fancybox.css">
-        <link rel="stylesheet" href="./css/style.min.css?v8">
+        <link rel="stylesheet" href="./css/style.min.css?v10">
         <link rel="stylesheet" href="./css/add.css?v0">
     </head>
     <body>
@@ -577,7 +577,7 @@
                                             <div class="form__bottom">
                                                 <div class="div1">
                                                         <label class="field-checkbox">
-                                                            <input class="field-checkbox__input" type="checkbox" name="checkbox" checked><span class="field-checkbox__span-input"></span><span class="field-checkbox__label">Согласен с <a href="#!" target="_blank">офертой</a></span>
+                                                            <input class="field-checkbox__input" type="checkbox" name="checkbox" checked required><span class="field-checkbox__span-input"></span><span class="field-checkbox__label">Согласен с <a href="#!" target="_blank">офертой</a></span>
                                                         </label>
                                                 </div>
                                                 <div class="div2">
@@ -624,84 +624,104 @@
                 <!-- family-->
                 <section class="family" id="family">
                     <div class="container">
-                        <div class="family__carousel">
-                            <div>
-                                <div class="family__wrapper">
-                                    <div class="div1">
-                                        <div class="family__title">Сделав пожертвование и оставив свой e-mail, вы будете ежемесячно получать отчет о нашей деятельности.</div>
-                                        <div class="family__content">
-                                            <p>А это фотографии подопечных, получивших продуктовые наборы, данные о количестве розданных наборов, информацию о потраченных средствах.</p>
-                                        </div>
-                                        <div class="family__history">
-                                            <div class="family__history-number">
-                                                <div class="div1">01</div>
-                                                <div class="div2">Еще одна история о безвоздмездной помощи нашего фонда</div>
-                                            </div>
-                                            <div class="family__history-title">История семьи Мойши </div>
-                                            <div class="family__btns">
-                                                <button class="family__btns-prev" type="button"></button>
-                                                <button class="family__btns-next" type="button"></button>
-                                            </div>
-                                        </div>
+                        <div class="family__wrapper">
+                            <div class="div1">
+                                <div class="family__title">Сделав пожертвование и оставив свой e-mail, вы будете ежемесячно получать отчет о нашей деятельности.</div>
+                                <div class="family__content">
+                                    <p>А это фотографии подопечных, получивших продуктовые наборы, данные о количестве розданных наборов, информацию о потраченных средствах.</p>
+                                </div>
+                                <div class="family__history">
+                                    <div class="family__history-number">
+                                        <div class="div1">01</div>
+                                        <div class="div2">Еще одна история о безвоздмездной помощи нашего фонда</div>
                                     </div>
-                                    <div class="div2">
+                                    <div class="family__history-title">История семьи Мойши </div>
+                                    <div class="family__btns">
+                                        <button class="family__btns-prev" type="button" id="family__btns-prev"></button>
+                                        <button class="family__btns-next" type="button" id="family__btns-next"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="div2">
+                                <div class="family__carousel">
+                                    <div>
                                         <div class="family__about">
                                             <div class="family__about-thumb"><img src="./tmp/modal-img-1.png" alt=""></div>
                                             <div class="family__about-title">Семья Мойши Абрамовича</div>
                                             <p>Небольшая молодая семья в Бейт-Шемеше</p>
                                         </div><a class="btn open-popup-link" href="#gallery">Фотоотчет</a>
                                     </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="family__wrapper">
-                                    <div class="div1">
-                                        <div class="family__title">Сделав пожертвование и оставив свой e-mail, вы будете ежемесячно получать отчет о нашей деятельности.</div>
-                                        <div class="family__content">
-                                            <p>А это фотографии подопечных, получивших продуктовые наборы, данные о количестве розданных наборов, информацию о потраченных средствах.</p>
-                                            <p>А это фотографии подопечных, получивших продуктовые наборы, данные о количестве розданных наборов, информацию о потраченных средствах.</p>
-                                        </div>
-                                        <div class="family__history">
-                                            <div class="family__history-number">
-                                                <div class="div1">02</div>
-                                                <div class="div2">Еще одна история о безвоздмездной помощи нашего фонда</div>
-                                            </div>
-                                            <div class="family__history-title">История семьи Мойши </div>
-                                            <div class="family__btns">
-                                                <button class="family__btns-prev" type="button"></button>
-                                                <button class="family__btns-next" type="button"></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="div2">
+                                    <div>
                                         <div class="family__about">
                                             <div class="family__about-thumb"><img src="./tmp/modal-img-2.png" alt=""></div>
                                             <div class="family__about-title">Семья Мойши Абрамовича</div>
                                             <p>Небольшая молодая семья в Бейт-Шемеше</p>
                                         </div><a class="btn open-popup-link" href="#gallery">Фотоотчет</a>
                                     </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="family__wrapper">
-                                    <div class="div1">
-                                        <div class="family__title">Сделав пожертвование и оставив свой e-mail, вы будете ежемесячно получать отчет о нашей деятельности.</div>
-                                        <div class="family__content">
-                                            <p>А это фотографии подопечных, получивших продуктовые наборы, данные о количестве розданных наборов, информацию о потраченных средствах.</p>
-                                        </div>
-                                        <div class="family__history">
-                                            <div class="family__history-number">
-                                                <div class="div1">03</div>
-                                                <div class="div2">Еще одна история о безвоздмездной помощи нашего фонда</div>
-                                            </div>
-                                            <div class="family__history-title">История семьи Мойши </div>
-                                            <div class="family__btns">
-                                                <button class="family__btns-prev" type="button"></button>
-                                                <button class="family__btns-next" type="button"></button>
-                                            </div>
-                                        </div>
+                                    <div>
+                                        <div class="family__about">
+                                            <div class="family__about-thumb"><img src="./tmp/modal-img-3.png" alt=""></div>
+                                            <div class="family__about-title">Семья Мойши Абрамовича</div>
+                                            <p>Небольшая молодая семья в Бейт-Шемеше</p>
+                                        </div><a class="btn open-popup-link" href="#gallery">Фотоотчет</a>
                                     </div>
-                                    <div class="div2">
+                                    <div>
+                                        <div class="family__about">
+                                            <div class="family__about-thumb"><img src="./tmp/modal-img-1.png" alt=""></div>
+                                            <div class="family__about-title">Семья Мойши Абрамовича</div>
+                                            <p>Небольшая молодая семья в Бейт-Шемеше</p>
+                                        </div><a class="btn open-popup-link" href="#gallery">Фотоотчет</a>
+                                    </div>
+                                    <div>
+                                        <div class="family__about">
+                                            <div class="family__about-thumb"><img src="./tmp/modal-img-2.png" alt=""></div>
+                                            <div class="family__about-title">Семья Мойши Абрамовича</div>
+                                            <p>Небольшая молодая семья в Бейт-Шемеше</p>
+                                        </div><a class="btn open-popup-link" href="#gallery">Фотоотчет</a>
+                                    </div>
+                                    <div>
+                                        <div class="family__about">
+                                            <div class="family__about-thumb"><img src="./tmp/modal-img-3.png" alt=""></div>
+                                            <div class="family__about-title">Семья Мойши Абрамовича</div>
+                                            <p>Небольшая молодая семья в Бейт-Шемеше</p>
+                                        </div><a class="btn open-popup-link" href="#gallery">Фотоотчет</a>
+                                    </div>
+                                    <div>
+                                        <div class="family__about">
+                                            <div class="family__about-thumb"><img src="./tmp/modal-img-1.png" alt=""></div>
+                                            <div class="family__about-title">Семья Мойши Абрамовича</div>
+                                            <p>Небольшая молодая семья в Бейт-Шемеше</p>
+                                        </div><a class="btn open-popup-link" href="#gallery">Фотоотчет</a>
+                                    </div>
+                                    <div>
+                                        <div class="family__about">
+                                            <div class="family__about-thumb"><img src="./tmp/modal-img-2.png" alt=""></div>
+                                            <div class="family__about-title">Семья Мойши Абрамовича</div>
+                                            <p>Небольшая молодая семья в Бейт-Шемеше</p>
+                                        </div><a class="btn open-popup-link" href="#gallery">Фотоотчет</a>
+                                    </div>
+                                    <div>
+                                        <div class="family__about">
+                                            <div class="family__about-thumb"><img src="./tmp/modal-img-3.png" alt=""></div>
+                                            <div class="family__about-title">Семья Мойши Абрамовича</div>
+                                            <p>Небольшая молодая семья в Бейт-Шемеше</p>
+                                        </div><a class="btn open-popup-link" href="#gallery">Фотоотчет</a>
+                                    </div>
+                                    <div>
+                                        <div class="family__about">
+                                            <div class="family__about-thumb"><img src="./tmp/modal-img-1.png" alt=""></div>
+                                            <div class="family__about-title">Семья Мойши Абрамовича</div>
+                                            <p>Небольшая молодая семья в Бейт-Шемеше</p>
+                                        </div><a class="btn open-popup-link" href="#gallery">Фотоотчет</a>
+                                    </div>
+                                    <div>
+                                        <div class="family__about">
+                                            <div class="family__about-thumb"><img src="./tmp/modal-img-2.png" alt=""></div>
+                                            <div class="family__about-title">Семья Мойши Абрамовича</div>
+                                            <p>Небольшая молодая семья в Бейт-Шемеше</p>
+                                        </div><a class="btn open-popup-link" href="#gallery">Фотоотчет</a>
+                                    </div>
+                                    <div>
                                         <div class="family__about">
                                             <div class="family__about-thumb"><img src="./tmp/modal-img-3.png" alt=""></div>
                                             <div class="family__about-title">Семья Мойши Абрамовича</div>
@@ -765,7 +785,7 @@
         <script src="./js/libs/fancybox/jquery.fancybox.min.js"></script>
         <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
         <script src="./js/libs/wNumb.min.js"></script>
-        <script src="./js/common.js?v2"></script>
+        <script src="./js/common.js?v3"></script>
         <script>
             $(document).on('ready', function(){
               var cnt=document.getElementById("count"); 

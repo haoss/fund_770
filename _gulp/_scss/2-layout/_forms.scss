@@ -326,11 +326,36 @@ textarea.field-text__input {
     }
   }
   &__input {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    &~.error {
+      color: #fb7f7f;
+      font-size: 13px;
+      margin: 0;
+      padding-left: 0;
+      font-weight: 400;
+      position: absolute;
+      left: 58px;
+      bottom: -15px;
+      &~#{$this} {
+        &__span-input {
+          border-color: #fb7f7f;
+        }
+      }
+    }
     &:checked {
       &~#{$this} {
         &__span-input {
           background: $color-brown;
+        }
+      }
+      &~.error {
+        opacity: 0;
+        visibility: hidden;
+        &~#{$this} {
+          &__span-input {
+            border-color: $color-gray;
+          }
         }
       }
       &:disabled {
