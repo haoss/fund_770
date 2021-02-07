@@ -20,10 +20,10 @@
     flex-grow: 1;
   }
   &__lang {
-    display: none;
+    // display: none;
     font-size: 16px;
     text-transform: uppercase;
-    margin-left: 70px;
+    margin-left: 10px;
     position: relative;
     z-index: 160;
     &-ul {
@@ -112,6 +112,7 @@
   @include media-breakpoint-up(sm) {
     &__lang {
       display: block;
+      margin-left: 70px;
     }
   }
   @include media-breakpoint-up(md) {
