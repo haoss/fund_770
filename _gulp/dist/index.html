@@ -12,7 +12,7 @@
         <meta name="format-detection" content="email=no">
         <meta content="notranslate" name="google">
         <link rel="stylesheet" href="./js/libs/fancybox/jquery.fancybox.css">
-        <link rel="stylesheet" href="./css/style.min.css?v1">
+        <link rel="stylesheet" href="./css/style.min.css?v6">
         <link rel="stylesheet" href="./css/add.css?v0">
     </head>
     <body>
@@ -83,16 +83,13 @@
                         <div class="modal__content">
                             <p>Частный благотворительный Фонд «770» ведет свою деятельность с 2018 благодаря финансовой помощи группы бизнесменов. </p>
                             <p>«Кошерный дом» - флагманский проект фонда. Он направлен на помощь тысячам евреев, которые находятся за чертой бедности и не могут позволить себе купить кошерные продукты. В наших с вами силах не допустить, чтобы из-за финансовых проблем евреи отказывались от исполнения важной заповеди, от своих корней и в итоге отходили от Торы. </p>
-                            <div class="modal__video"><img src="./tmp/family-img-big.png" alt=""><a class="modal__video-link" href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox></a></div>
-                        </div>
-                        <div class="clear"></div>
-                        <div class="family__history">
-                            <div class="family__history-number">
-                                <div class="div1">03</div>
-                                <div class="div2">Еще одна история о безвоздмездной помощи нашего фонда</div>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <video controls poster="./tmp/family-img-big.png" preload="false">
+                                    <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+                                    <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm">
+                                    <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogg">Video not supported.
+                                </video>
                             </div>
-                            <div class="family__history-title">История семьи Мойши </div>
-                            <div class="family__btns"><a class="family__btns-prev" href="#!"></a><a class="family__btns-next" href="#!"></a></div>
                         </div>
                     </div>
                 </div>
@@ -289,7 +286,7 @@
                                 </div>
                             </div>
                             <div class="div2">
-                                <div class="video__div"><img src="./tmp/video-img.png" alt=""><a class="video__div-link" href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox></a></div>
+                                <div class="video__div"><a href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox><img src="./tmp/video-img.png" alt=""></a><a class="video__div-link" href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox></a></div>
                             </div>
                         </div>
                     </div>
@@ -627,27 +624,91 @@
                 <!-- family-->
                 <section class="family" id="family">
                     <div class="container">
-                        <div class="family__wrapper">
-                            <div class="div1">
-                                <div class="family__title">Сделав пожертвование и оставив свой e-mail, вы будете ежемесячно получать отчет о нашей деятельности.</div>
-                                <div class="family__content">
-                                    <p>А это фотографии подопечных, получивших продуктовые наборы, данные о количестве розданных наборов, информацию о потраченных средствах.</p>
-                                </div>
-                                <div class="family__history">
-                                    <div class="family__history-number">
-                                        <div class="div1">03</div>
-                                        <div class="div2">Еще одна история о безвоздмездной помощи нашего фонда</div>
+                        <div class="family__carousel">
+                            <div>
+                                <div class="family__wrapper">
+                                    <div class="div1">
+                                        <div class="family__title">Сделав пожертвование и оставив свой e-mail, вы будете ежемесячно получать отчет о нашей деятельности.</div>
+                                        <div class="family__content">
+                                            <p>А это фотографии подопечных, получивших продуктовые наборы, данные о количестве розданных наборов, информацию о потраченных средствах.</p>
+                                        </div>
+                                        <div class="family__history">
+                                            <div class="family__history-number">
+                                                <div class="div1">01</div>
+                                                <div class="div2">Еще одна история о безвоздмездной помощи нашего фонда</div>
+                                            </div>
+                                            <div class="family__history-title">История семьи Мойши </div>
+                                            <div class="family__btns">
+                                                <button class="family__btns-prev" type="button"></button>
+                                                <button class="family__btns-next" type="button"></button>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="family__history-title">История семьи Мойши </div>
-                                    <div class="family__btns"><a class="family__btns-prev" href="#!"></a><a class="family__btns-next" href="#!"></a></div>
+                                    <div class="div2">
+                                        <div class="family__about">
+                                            <div class="family__about-thumb"><img src="./tmp/modal-img-1.png" alt=""></div>
+                                            <div class="family__about-title">Семья Мойши Абрамовича</div>
+                                            <p>Небольшая молодая семья в Бейт-Шемеше</p>
+                                        </div><a class="btn open-popup-link" href="#gallery">Фотоотчет</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="div2">
-                                <div class="family__about">
-                                    <div class="family__about-thumb"><img src="./tmp/family-img-1.png" alt=""></div>
-                                    <div class="family__about-title">Семья Мойши Абрамовича</div>
-                                    <p>Небольшая молодая семья в Бейт-Шемеше</p>
-                                </div><a class="btn open-popup-link" href="#gallery">Фотоотчет</a>
+                            <div>
+                                <div class="family__wrapper">
+                                    <div class="div1">
+                                        <div class="family__title">Сделав пожертвование и оставив свой e-mail, вы будете ежемесячно получать отчет о нашей деятельности.</div>
+                                        <div class="family__content">
+                                            <p>А это фотографии подопечных, получивших продуктовые наборы, данные о количестве розданных наборов, информацию о потраченных средствах.</p>
+                                            <p>А это фотографии подопечных, получивших продуктовые наборы, данные о количестве розданных наборов, информацию о потраченных средствах.</p>
+                                        </div>
+                                        <div class="family__history">
+                                            <div class="family__history-number">
+                                                <div class="div1">02</div>
+                                                <div class="div2">Еще одна история о безвоздмездной помощи нашего фонда</div>
+                                            </div>
+                                            <div class="family__history-title">История семьи Мойши </div>
+                                            <div class="family__btns">
+                                                <button class="family__btns-prev" type="button"></button>
+                                                <button class="family__btns-next" type="button"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="div2">
+                                        <div class="family__about">
+                                            <div class="family__about-thumb"><img src="./tmp/modal-img-2.png" alt=""></div>
+                                            <div class="family__about-title">Семья Мойши Абрамовича</div>
+                                            <p>Небольшая молодая семья в Бейт-Шемеше</p>
+                                        </div><a class="btn open-popup-link" href="#gallery">Фотоотчет</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="family__wrapper">
+                                    <div class="div1">
+                                        <div class="family__title">Сделав пожертвование и оставив свой e-mail, вы будете ежемесячно получать отчет о нашей деятельности.</div>
+                                        <div class="family__content">
+                                            <p>А это фотографии подопечных, получивших продуктовые наборы, данные о количестве розданных наборов, информацию о потраченных средствах.</p>
+                                        </div>
+                                        <div class="family__history">
+                                            <div class="family__history-number">
+                                                <div class="div1">03</div>
+                                                <div class="div2">Еще одна история о безвоздмездной помощи нашего фонда</div>
+                                            </div>
+                                            <div class="family__history-title">История семьи Мойши </div>
+                                            <div class="family__btns">
+                                                <button class="family__btns-prev" type="button"></button>
+                                                <button class="family__btns-next" type="button"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="div2">
+                                        <div class="family__about">
+                                            <div class="family__about-thumb"><img src="./tmp/modal-img-3.png" alt=""></div>
+                                            <div class="family__about-title">Семья Мойши Абрамовича</div>
+                                            <p>Небольшая молодая семья в Бейт-Шемеше</p>
+                                        </div><a class="btn open-popup-link" href="#gallery">Фотоотчет</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -704,7 +765,7 @@
         <script src="./js/libs/fancybox/jquery.fancybox.min.js"></script>
         <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
         <script src="./js/libs/wNumb.min.js"></script>
-        <script src="./js/common.js"></script>
+        <script src="./js/common.js?v2"></script>
         <script>
             $(document).on('ready', function(){
               var cnt=document.getElementById("count"); 

@@ -75,9 +75,37 @@ $(document).on('ready', function(){
 
         $slider1.slick('slickGoTo', +$(this).attr('index'));
         $slider2.slick('slickGoTo', +$(this).attr('index'));
+
+        // var playButton = document.getElementById("play_button");
+        // var video = document.getElementById('play_video');
+        // // Event listener for the play/pause button
+        // playButton.addEventListener("click", function() {
+        //   if (video.paused == true) {
+        //     // Play the video
+        //     video.play();
+
+        //     // Update the button text to 'Pause'
+        //     playButton.innerHTML = "Pause";
+        //   } else {
+        //     // Pause the video
+        //     video.pause();
+
+        //     // Update the button text to 'Play'
+        //     playButton.innerHTML = "Play";
+        //   }
+        // });
       },
     }
   });
+
+  $('.family__carousel').slick({
+    mobileFirst: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    prevArrow: '.family__btns-prev',
+    nextArrow: '.family__btns-next'
+  })
 
   $("form").each(function(){
     $(this).validate();

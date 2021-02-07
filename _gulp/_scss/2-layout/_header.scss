@@ -8,6 +8,7 @@
   right: 0;
   padding: 24px 0 14px 0;
   height: 90px;
+  transition: all 0.35s;
   &__wrapper {
     display: flex;
     align-items: center;
@@ -75,6 +76,8 @@
             font-family: $font-icomoon;
             font-size: 7px;
             margin-left: 6px;
+            position: relative;
+            top: -1px;
           }
         }
       }
@@ -102,6 +105,10 @@
       }
     }
   }
+  &.is-scroll {
+    padding-top: 14px;
+    height: 80px;
+  }
   @include media-breakpoint-up(sm) {
     &__lang {
       display: block;
@@ -118,9 +125,22 @@
     }
     &__lang {
       margin-top: 9px;
+      &-ul {
+        li {
+          &>a {
+            &:hover {
+              color: $color-dark;
+            }
+          }
+        }
+      }
     }
     &-holder {
       display: none;
+    }
+    &.is-scroll {
+      padding-top: 24px;
+      height: 90px;
     }
   }
   @include media-breakpoint-up(lg) {

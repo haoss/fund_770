@@ -334,13 +334,13 @@
         &_back {
           right: 0;
           fill: rgba(176,140,102,.8);
-          animation: wave-back 1.4s infinite linear;
+          animation: wave-back 2.8s infinite linear;
         }
         &_front {
           left: 0;
           fill: rgba(176,140,102,1);
           margin-bottom: -1px;
-          animation: wave-front .7s infinite linear;
+          animation: wave-front 1.4s infinite linear;
         }
       }
     }
@@ -934,6 +934,27 @@
     }
     &__description {
       font-size: 16px;
+    }
+    &__carousel {
+      .slick-arrow {
+        &::before {
+          transition: all 0.35s;
+        }
+        &.slick-prev {
+          &:hover {
+            &::before {
+              color: $color-brown;
+            }
+          }
+        }
+        &.slick-next {
+          &:hover {
+            &::before {
+              color: $color-dark;
+            }
+          }
+        }
+      }
     }
   }
   @include media-breakpoint-up(lg) {
@@ -1728,6 +1749,10 @@ ol {
           background: $color-dark;
           color: $color-white;
           border-color: $color-dark !important;
+          transition: all 0.35s;
+          &:hover {
+            background: $color-brown;
+          }
         }
         &:checked {
           &+span {
@@ -2119,6 +2144,28 @@ ol {
       position: relative;
       margin-left: 0;
     }
+    &__btns {
+      &-prev {
+        &::before {
+          transition: all 0.35s;
+        }
+        &:hover {
+          &::before {
+            color: $color-brown;
+          }
+        }
+      }
+      &-next {
+        &::before {
+          transition: all 0.35s;
+        }
+        &:hover {
+          &::before {
+            color: $color-dark;
+          }
+        }
+      }
+    }
   }
   @include media-breakpoint-up(lg) {
     padding-top: 95px;
@@ -2294,6 +2341,17 @@ ol {
           padding-left: 35px;
         }
       }
+      a {
+        i {
+          opacity: 1;
+          transition: all 0.35s;
+        }
+        &:hover {
+          i {
+            opacity: 0.5;
+          }
+        }
+      }
     }
     &__number {
       &>div {
@@ -2319,4 +2377,10 @@ ol {
       padding-left: 60px;
     }
   }
+}
+
+video[poster]{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

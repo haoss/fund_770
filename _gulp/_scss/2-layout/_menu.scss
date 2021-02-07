@@ -62,6 +62,9 @@
       }
     }
   }
+  .is-scroll & {
+    top: 80px;
+  }
   @include media-breakpoint-down(sm) {
     position: fixed;
     top: 90px;
@@ -185,6 +188,11 @@
           }
           &+li {
             margin-left: 40px;
+          }
+          a {
+            &:hover {
+              color: $color-brown;
+            }
           }
         }
       }

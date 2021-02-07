@@ -25,6 +25,8 @@ body {
   color: $color-dark;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
+  touch-action: none;
+  -ms-touch-action: none;
   @include media-breakpoint-up(sm) {
     font-size: rem(20px);
   }

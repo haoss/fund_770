@@ -134,7 +134,8 @@ html(lang="ru")
                     p Рассказ о нашем благотворительном фонде ведет Любавичский Ребе 
                 .div2
                   .video__div
-                    img(src="./tmp/video-img.png", alt="")
+                    a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox)
+                      img(src="./tmp/video-img.png", alt="")
                     a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox).video__div-link
           // /end Video
 
@@ -469,26 +470,71 @@ html(lang="ru")
           // family
           section#family.family
             .container
-              .family__wrapper
-                .div1
-                  .family__title Сделав пожертвование и оставив свой e-mail, вы будете ежемесячно получать отчет о нашей деятельности.
-                  .family__content
-                    p А это фотографии подопечных, получивших продуктовые наборы, данные о количестве розданных наборов, информацию о потраченных средствах.
-                  .family__history
-                    .family__history-number
-                      .div1 03
-                      .div2 Еще одна история о безвоздмездной помощи нашего фонда
-                    .family__history-title История семьи Мойши 
-                    .family__btns
-                      a(href="#!").family__btns-prev
-                      a(href="#!").family__btns-next
-                .div2
-                  .family__about
-                    .family__about-thumb
-                      img(src="./tmp/family-img-1.png", alt="")
-                    .family__about-title Семья Мойши Абрамовича
-                    p Небольшая молодая семья в Бейт-Шемеше
-                  a(href="#gallery").btn.open-popup-link Фотоотчет
+              .family__carousel
+                div
+                  .family__wrapper
+                    .div1
+                      .family__title Сделав пожертвование и оставив свой e-mail, вы будете ежемесячно получать отчет о нашей деятельности.
+                      .family__content
+                        p А это фотографии подопечных, получивших продуктовые наборы, данные о количестве розданных наборов, информацию о потраченных средствах.
+                      .family__history
+                        .family__history-number
+                          .div1 01
+                          .div2 Еще одна история о безвоздмездной помощи нашего фонда
+                        .family__history-title История семьи Мойши 
+                        .family__btns
+                          button(type="button").family__btns-prev
+                          button(type="button").family__btns-next
+                    .div2
+                      .family__about
+                        .family__about-thumb
+                          img(src="./tmp/modal-img-1.png", alt="")
+                        .family__about-title Семья Мойши Абрамовича
+                        p Небольшая молодая семья в Бейт-Шемеше
+                      a(href="#gallery").btn.open-popup-link Фотоотчет
+                div
+                  .family__wrapper
+                    .div1
+                      .family__title Сделав пожертвование и оставив свой e-mail, вы будете ежемесячно получать отчет о нашей деятельности.
+                      .family__content
+                        p А это фотографии подопечных, получивших продуктовые наборы, данные о количестве розданных наборов, информацию о потраченных средствах.
+                        p А это фотографии подопечных, получивших продуктовые наборы, данные о количестве розданных наборов, информацию о потраченных средствах.
+                      .family__history
+                        .family__history-number
+                          .div1 02
+                          .div2 Еще одна история о безвоздмездной помощи нашего фонда
+                        .family__history-title История семьи Мойши 
+                        .family__btns
+                          button(type="button").family__btns-prev
+                          button(type="button").family__btns-next
+                    .div2
+                      .family__about
+                        .family__about-thumb
+                          img(src="./tmp/modal-img-2.png", alt="")
+                        .family__about-title Семья Мойши Абрамовича
+                        p Небольшая молодая семья в Бейт-Шемеше
+                      a(href="#gallery").btn.open-popup-link Фотоотчет
+                div
+                  .family__wrapper
+                    .div1
+                      .family__title Сделав пожертвование и оставив свой e-mail, вы будете ежемесячно получать отчет о нашей деятельности.
+                      .family__content
+                        p А это фотографии подопечных, получивших продуктовые наборы, данные о количестве розданных наборов, информацию о потраченных средствах.
+                      .family__history
+                        .family__history-number
+                          .div1 03
+                          .div2 Еще одна история о безвоздмездной помощи нашего фонда
+                        .family__history-title История семьи Мойши 
+                        .family__btns
+                          button(type="button").family__btns-prev
+                          button(type="button").family__btns-next
+                    .div2
+                      .family__about
+                        .family__about-thumb
+                          img(src="./tmp/modal-img-3.png", alt="")
+                        .family__about-title Семья Мойши Абрамовича
+                        p Небольшая молодая семья в Бейт-Шемеше
+                      a(href="#gallery").btn.open-popup-link Фотоотчет
           // /end family
 
           // help
@@ -542,7 +588,7 @@ html(lang="ru")
 
     // Load Scripts
     include ./_include/_footer-js
-    script(src="./js/common.js")
+    script(src="./js/common.js?v2")
 
     script.
       $(document).on('ready', function(){

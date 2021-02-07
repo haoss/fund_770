@@ -684,6 +684,10 @@ textarea.field-text__input {
       line-height: 50px;
       border: 1px solid $color-white !important;
       transition: all 0.35s;
+      &:hover {
+        color: $color-white;
+        background: $color-dark;
+      }
     }
     &:checked {
       &+span {

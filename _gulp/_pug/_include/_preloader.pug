@@ -62,15 +62,18 @@
       .modal__content
         p Частный благотворительный Фонд «770» ведет свою деятельность с 2018 благодаря финансовой помощи группы бизнесменов. 
         p «Кошерный дом» - флагманский проект фонда. Он направлен на помощь тысячам евреев, которые находятся за чертой бедности и не могут позволить себе купить кошерные продукты. В наших с вами силах не допустить, чтобы из-за финансовых проблем евреи отказывались от исполнения важной заповеди, от своих корней и в итоге отходили от Торы. 
-        .modal__video
-          img(src="./tmp/family-img-big.png", alt="")
-          a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox).modal__video-link
-      .clear
-      .family__history
-        .family__history-number
-          .div1 03
-          .div2 Еще одна история о безвоздмездной помощи нашего фонда
-        .family__history-title История семьи Мойши 
-        .family__btns
-          a(href="#!").family__btns-prev
-          a(href="#!").family__btns-next
+        .embed-responsive.embed-responsive-16by9
+          video(controls poster="./tmp/family-img-big.png" preload="false")
+            source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4' type='video/mp4')
+            source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm' type='video/webm')
+            source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv' type='video/ogg')
+            | Video not supported.
+      //- .clear
+      //- .family__history
+      //-   .family__history-number
+      //-     .div1 03
+      //-     .div2 Еще одна история о безвоздмездной помощи нашего фонда
+      //-   .family__history-title История семьи Мойши 
+      //-   .family__btns
+      //-     a(href="#!").family__btns-prev
+      //-     a(href="#!").family__btns-next
