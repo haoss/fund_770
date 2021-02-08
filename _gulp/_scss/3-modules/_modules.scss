@@ -45,10 +45,10 @@
     }
   }
   &__content {
-    font-size: 14px;
+    font-size: rem(14px);
     color: $color-dark;
     .btn {
-      font-size: 20px;
+      font-size: rem(20px);
     }
   }
   @include media-breakpoint-up(sm) {
@@ -64,7 +64,7 @@
     &__content {
       .btn {
         min-width: 380px;
-        font-size: 22px;
+        font-size: rem(22px);
       }
     }
   }
@@ -114,7 +114,7 @@
     }
     &__content {
       max-width: 715px;
-      font-size: 20px;
+      font-size: rem(20px);
     }
     &__img {
       height: 785px;
@@ -229,7 +229,7 @@
   }
   &__block {
     font-weight: 900;
-    font-size: 18px;
+    font-size: rem(18px);
     color: $color-dark;
     margin-bottom: 40px;
     position: relative;
@@ -238,15 +238,15 @@
       line-height: 1;
       .--target & {
         padding-left: 40px;
-        font-size: 22px;
+        font-size: rem(22px);
       }
     }
     &-price {
       color: $color-brown;
-      font-size: 36px;
+      font-size: rem(36px);
       line-height: 1;
       .--target & {
-        font-size: 40px;
+        font-size: rem(40px);
       }
     }
     &.--left {
@@ -261,7 +261,7 @@
   &__info {
     display: flex;
     align-items: center;
-    font-size: 12px;
+    font-size: rem(12px);
     color: rgba($color-dark,.5);
     p {
       margin-bottom: 0;
@@ -269,7 +269,7 @@
     }
     &-percent {
       color: $color-white;
-      font-size: 110px;
+      font-size: rem(110px);
       line-height: 1;
       font-weight: 900;
       position: absolute;
@@ -313,7 +313,7 @@
       justify-content: center; 
       align-items: center;
       color: rgba($color-white,.1);
-      font-size: 110px;
+      font-size: rem(110px);
       font-weight: 900;
       line-height: 1;
     } 
@@ -375,15 +375,15 @@
     &__block {
       margin-bottom: 0;
       &-head {
-        font-size: 24px;
+        font-size: rem(24px);
         .--target & {
-          font-size: 30px;
+          font-size: rem(30px);
         }
       }
       &-price {
-        font-size: 46px;
+        font-size: rem(46px);
         .--target & {
-          font-size: 70px;
+          font-size: rem(70px);
         }
       }
       &.--left {
@@ -401,12 +401,12 @@
       margin: 40px;
       box-shadow: 0px 10px 40px rgba($primary-color,.25), 0 0 0 40px $color-white;
       &-percent {
-        font-size: 170px;
+        font-size: rem(170px);
       }
     }
     &__info {
       &-percent {
-        font-size: 150px;
+        font-size: rem(150px);
         margin-top: -388px;
         margin-left: 420px;
       }
@@ -435,7 +435,7 @@
       margin: 28px;
       box-shadow: 0px 10px 28px rgba($primary-color,.25), 0 0 0 28px $color-white;
       &-percent {
-        font-size: 120px;
+        font-size: rem(120px);
       }
     }
     &__info {
@@ -471,21 +471,21 @@
       margin: 40px;
       box-shadow: 0px 10px 40px rgba($primary-color,.25), 0 0 0 40px $color-white;
       &-percent {
-        font-size: 180px;
+        font-size: rem(180px);
       }
     }
     &__block {
-      font-size: 24px;
+      font-size: rem(24px);
       &-head {
         .--target & {
-          font-size: 30px;
+          font-size: rem(30px);
           padding-left: 55px;
         }
       }
       &-price {
-        font-size: 46px;
+        font-size: rem(46px);
         .--target & {
-          font-size: 70px;
+          font-size: rem(70px);
         }
       }
       &.--start {
@@ -504,9 +504,9 @@
       }
     }
     &__info {
-      font-size: 14px;
+      font-size: rem(14px);
       &-percent {
-        font-size: 150px;
+        font-size: rem(150px);
       }
     }
   }
@@ -517,7 +517,7 @@
   padding-bottom: 97px;
   position: relative;
   &__content {
-    font-size: 16px;
+    font-size: rem(16px);
   }
   &__div {
     width: 290px;
@@ -551,7 +551,7 @@
       z-index: 10;
       width: 90px;
       height: 90px;
-      font-size: 26px;
+      font-size: rem(26px);
       border-radius: 50%;
       background: $color-white;
       left: 0;
@@ -585,14 +585,14 @@
       size: 1543px;
     };
     &__content {
-      font-size: 18px;
+      font-size: rem(18px);
       padding-bottom: 10px;
     }
     &__div {
       width: 549px;
       margin-bottom: 83px;
       &-link {
-        font-size: 23px;
+        font-size: rem(23px);
         width: 80px;
         height: 80px;
         left: -26px;
@@ -613,7 +613,7 @@
       position: 49% 90px;
     };
     &__content {
-      font-size: 16px;
+      font-size: rem(16px);
       max-width: 154px;
     }
     &__wrapper {
@@ -637,7 +637,7 @@
       &-link {
         width: 90px;
         height: 90px;
-        font-size: 26px;
+        font-size: rem(26px);
         left: -30px;
         bottom: -30px;
       }
@@ -655,7 +655,7 @@
       position: center 90px;
     };
     &__content {
-      font-size: 18px;
+      font-size: rem(18px);
       max-width: 245px;
     }
     &__wrapper {
@@ -671,7 +671,7 @@
       &-link {
         width: 120px;
         height: 120px;
-        font-size: 34px;
+        font-size: rem(34px);
         left: -40px;
         bottom: -40px;
       }
@@ -693,7 +693,7 @@
     flex-direction: column;
   }
   &__block {
-    font-size: 14px;
+    font-size: rem(14px);
     color: $color-dark;
     display: flex;
     flex-direction: column;
@@ -814,10 +814,10 @@
     position: relative;
   }
   &__content {
-    font-size: 16px;
+    font-size: rem(16px);
   }
   &__description {
-    font-size: 20px;
+    font-size: rem(20px);
   }
   &__carousel {
     .slick-track {
@@ -848,7 +848,7 @@
       &::before {
         opacity: 1;
         font-family: $font-icomoon;
-        font-size: 72px;
+        font-size: rem(72px);
         content: "\e902";
         color: $color-brown;
       }
@@ -857,7 +857,7 @@
         left: 50%;
         transform: translateX(-180%);
         &::before {
-          font-size: 35px;
+          font-size: rem(35px);
           content: "\e901";
           color: $color-dark;
         }
@@ -874,7 +874,7 @@
       top: 50%;
       transform: translate(-50%,-10%);
       color: $color-white;
-      font-size: 13px;
+      font-size: rem(13px);
       font-weight: 900;
       width: 100%;
       max-width: 90%;
@@ -886,14 +886,14 @@
     left: 50%;
     transform: translateX(-50%);
     bottom: -60px;
-    font-size: 16px;
+    font-size: rem(16px);
     font-weight: 800;
     letter-spacing: 0.1em;
   }
   @include media-breakpoint-up(sm) {
     &__block {
       &-text {
-        font-size: 26px;
+        font-size: rem(26px);
       }
     }
     &__city {
@@ -930,10 +930,10 @@
       }
     }
     &__content {
-      font-size: 14px;
+      font-size: rem(14px);
     }
     &__description {
-      font-size: 16px;
+      font-size: rem(16px);
     }
     &__carousel {
       .slick-arrow {
@@ -968,10 +968,10 @@
       }
     }
     &__content {
-      font-size: 16px;
+      font-size: rem(16px);
     }
     &__description {
-      font-size: 20px;
+      font-size: rem(20px);
     }
     &__carousel {
       .slick-arrow {
@@ -992,7 +992,7 @@
   &::before {
     content: '\e916';
     position: absolute;
-    font-size: 418px;
+    font-size: rem(418px);
     line-height: 1;
     left: 37%;
     top: 157px;
@@ -1009,11 +1009,11 @@
     flex-direction: column;
   }
   &__block {
-    font-size: 14px;
+    font-size: rem(14px);
     margin-bottom: 30px;
     &-head {
       color: $color-brown;
-      font-size: 70px;
+      font-size: rem(70px);
       font-weight: 900;
       line-height: 1;
       margin-bottom: 5px;
@@ -1025,18 +1025,18 @@
       }
     }
     &.--last {
-      font-size: 16px;
+      font-size: rem(16px);
     }
   }
   @include media-breakpoint-up(sm) {
     &__block {
-      font-size: 16px;
+      font-size: rem(16px);
       margin-bottom: 34px;
       &-head {
         font-size: 90px;
       }
       &.--last {
-        font-size: 18px;
+        font-size: rem(18px);
       }
     }
   }
@@ -1049,18 +1049,18 @@
       repeat: no-repeat;
     };
     &::before {
-      font-size: 334px;
+      font-size: rem(334px);
       top: 70px;
       left: 67%;
     }
     &__block {
-      font-size: 14px;
+      font-size: rem(14px);
       margin-bottom: 46px;
       &-head {
-        font-size: 70px;
+        font-size: rem(70px);
       }
       &.--last {
-        font-size: 16px;
+        font-size: rem(16px);
       }
     }
     &__wrapper {
@@ -1089,10 +1089,10 @@
       left: 63%;
     }
     &__block {
-      font-size: 16px;
+      font-size: rem(16px);
       margin-bottom: 40px;
       &.--last {
-        font-size: 18px;
+        font-size: rem(18px);
       }
     }
     &__wrapper {
@@ -1125,9 +1125,9 @@
     }
   }
   &__content {
-    font-size: 14px;
+    font-size: rem(14px);
     ul, ol {
-      font-size: 18px;
+      font-size: rem(18px);
     }
     .btn {
       width: 100%;
@@ -1142,9 +1142,9 @@
       margin-bottom: 24px;
     }
     &__content {
-      font-size: 20px;
+      font-size: rem(20px);
       ul, ol {
-        font-size: 22px;
+        font-size: rem(22px);
       }
     }
   }
@@ -1165,9 +1165,9 @@
       width: 568px;
     }
     &__content {
-      font-size: 16px;
+      font-size: rem(16px);
       ul, ol {
-        font-size: 18px;
+        font-size: rem(18px);
       }
     }
   }
@@ -1183,9 +1183,9 @@
       width: 811px;
     }
     &__content {
-      font-size: 20px;
+      font-size: rem(20px);
       ul, ol {
-        font-size: 22px;
+        font-size: rem(22px);
       }
     }
   }
@@ -1226,7 +1226,7 @@
   }
   &__content {
     margin-bottom: 35px;
-    font-size: 14px;
+    font-size: rem(14px);
     p {
       &:last-child {
         margin-bottom: 0;
@@ -1246,7 +1246,7 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    font-size: 12px;
+    font-size: rem(12px);
     margin-bottom: 20px;
     color: $color-dark;
     &-thumb {
@@ -1262,7 +1262,7 @@
       }
     }
     &-name {
-      font-size: 18px;
+      font-size: rem(18px);
       font-weight: 800;
       display: block;
     }
@@ -1285,7 +1285,7 @@
     &-content {
       margin-top: -28px;
       background: $color-white;
-      font-size: 14px;
+      font-size: rem(14px);
       font-style: italic;
       padding: 35px 35px 44px 44px;
       position: relative;
@@ -1310,12 +1310,12 @@
       }
     }
     &-name {
-      font-size: 18px;
+      font-size: rem(18px);
       font-weight: 800;
       margin-bottom: 5px;
     }
     &-description {
-      font-size: 12px;
+      font-size: rem(12px);
     }
     &-top {
       &>div {
@@ -1329,7 +1329,7 @@
       .btn {
         height: 50px;
         line-height: 50px;
-        font-size: 16px;
+        font-size: rem(16px);
         letter-spacing: 0.05em;
         width: 235px;
         min-width: inherit;
@@ -1350,16 +1350,16 @@
   @include media-breakpoint-up(sm) {
     &__content {
       max-width: 464px;
-      font-size: 18px;
+      font-size: rem(18px);
     }
     &__persona {
       &-content {
         margin-top: -42px;
         &::before {
-          font-size: 130px;
+          font-size: rem(130px);
           left: 20px;
         }
-        font-size: 16px;
+        font-size: rem(16px);
       }
       &-thumb {
         img {
@@ -1384,7 +1384,7 @@
       }
     }
     &__content {
-      font-size: 14px;
+      font-size: rem(14px);
       margin-bottom: 38px;
       max-width: 325px;
     }
@@ -1395,7 +1395,7 @@
           font-size: 96px;
           left: 14px;
         }
-        font-size: 14px;
+        font-size: rem(14px);
       }
       &-thumb {
         img {
@@ -1425,7 +1425,7 @@
   @include media-breakpoint-up(lg) {
     padding-top: 190px;
     &__content {
-      font-size: 18px;
+      font-size: rem(18px);
     }
     &__wrapper {
       &>div {
@@ -1445,10 +1445,10 @@
       &-content {
         margin-top: -42px;
         &::before {
-          font-size: 130px;
+          font-size: rem(130px);
           left: 20px;
         }
-        font-size: 16px;
+        font-size: rem(16px);
       }
       &-bottom {
         .btn {
@@ -1456,7 +1456,7 @@
         }
       }
       &-description {
-        font-size: 14px;
+        font-size: rem(14px);
       }
     }
   }
@@ -1481,7 +1481,7 @@ ol {
       background: $color-brown;
       color: $color-white;
       font-weight: 700;
-      font-size: 14px;
+      font-size: rem(14px);
       left: 22px;
     }
   }
@@ -1540,7 +1540,7 @@ ol {
     }
   }
   &__block {
-    font-size: 12px;
+    font-size: rem(12px);
     margin-bottom: 8px;
     &-thumb {
       position: relative;
@@ -1568,7 +1568,7 @@ ol {
       }
     }
     &-title {
-      font-size: 18px;
+      font-size: rem(18px);
       font-weight: 800;
       letter-spacing: 0.1em;
     }
@@ -1579,7 +1579,7 @@ ol {
     }
   }
   &__content {
-    font-size: 14px;
+    font-size: rem(14px);
     font-style: italic;
     padding: 25px 0 0 62px;
     position: relative;
@@ -1634,7 +1634,7 @@ ol {
       }
     }
     &__content {
-      font-size: 16px;
+      font-size: rem(16px);
       padding-right: 57px;
     }
   }
@@ -1669,7 +1669,7 @@ ol {
     }
     &__content {
       margin-left: -80px;
-      font-size: 14px;
+      font-size: rem(14px);
       padding-right: 0px;
     }
   }
@@ -1702,7 +1702,7 @@ ol {
     }
     &__content {
       margin-left: -60px;
-      font-size: 16px;
+      font-size: rem(16px);
     }
   }
 }
@@ -1723,15 +1723,15 @@ ol {
     }
   }
   &__info {
-    font-size: 12px;
+    font-size: rem(12px);
     margin-bottom: 30px;
     &.--fs14 {
-      font-size: 14px;
+      font-size: rem(14px);
     }
     a {
       text-decoration: none;
       color: $color-dark;
-      font-size: 18px;
+      font-size: rem(18px);
       display: inline-block;
       &:hover {
         color: $color-brown;
@@ -1902,7 +1902,7 @@ ol {
     &__info {
       max-width: 630px;
       &.--fs14 {
-        font-size: 16px;
+        font-size: rem(16px);
         max-width: inherit;
         margin-bottom: 20px;
       }
@@ -1939,7 +1939,7 @@ ol {
       min-width: auto;
       display: block;
       margin: 0 auto;
-      font-size: 16px;
+      font-size: rem(16px);
     }
     &>div {
       &.div2 {
@@ -1949,7 +1949,7 @@ ol {
   }
   &__about {
     font-weight: 500;
-    font-size: 12px;
+    font-size: rem(12px);
     margin-bottom: 20px;
     &-thumb {
       position: relative;
@@ -1975,7 +1975,7 @@ ol {
     }
     &-title {
       position: relative;
-      font-size: 16px;
+      font-size: rem(16px);
       font-weight: 800;
       letter-spacing: 0.1em;
       margin-top: -25px;
@@ -1985,18 +1985,18 @@ ol {
     }
   }
   &__title {
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: 700;
     margin-bottom: 35px;
   }
   &__content {
-    font-size: 14px;
+    font-size: rem(14px);
     margin-bottom: 35px;
   }
   &__history {
     margin-bottom: 34px;
     &-title {
-      font-size: 16px;
+      font-size: rem(16px);
       font-weight: 800;
       letter-spacing: 0.1em;
       margin-bottom: 10px;
@@ -2006,7 +2006,7 @@ ol {
       align-items: center;
       &>div {
         &.div1 {
-          font-size: 80px;
+          font-size: rem(80px);
           font-weight: 800;
           line-height: 1;
           vertical-align: middle;
@@ -2016,7 +2016,7 @@ ol {
         &.div2 {
           padding-left: 20px;
           flex-grow: 1;
-          font-size: 12px;
+          font-size: rem(12px);
           color: rgba($color-dark,0.3);
           max-width: 246px;
         }
@@ -2041,7 +2041,7 @@ ol {
       &::before {
         opacity: 1;
         font-family: $font-icomoon;
-        font-size: 72px;
+        font-size: rem(72px);
         content: "\e902";
         color: $color-brown;
       }
@@ -2049,7 +2049,7 @@ ol {
     &-prev {
       right: auto;
       &::before {
-        font-size: 35px;
+        font-size: rem(35px);
         content: "\e901";
         color: $color-dark;
       }
@@ -2057,10 +2057,10 @@ ol {
   }
   @include media-breakpoint-up(sm) {
     &__title {
-      font-size: 20px;
+      font-size: rem(20px);
     }
     &__content {
-      font-size: 16px;
+      font-size: rem(16px);
       margin-bottom: 25px;
     }
     &__btns {
@@ -2119,10 +2119,10 @@ ol {
       }
     }
     &__title {
-      font-size: 19px;
+      font-size: rem(19px);
     }
     &__content {
-      font-size: 14px;
+      font-size: rem(14px);
     }
     &__history {
       &-title {
@@ -2177,10 +2177,10 @@ ol {
       }
     }
     &__title {
-      font-size: 20px;
+      font-size: rem(20px);
     }
     &__content {
-      font-size: 16px;
+      font-size: rem(16px);
     }
     &__history {
       &-title {
@@ -2219,14 +2219,14 @@ ol {
     repeat: no-repeat;
   };
   &__title {
-    font-size: 40px;
+    font-size: rem(40px);
     color: $color-brown;
     margin-bottom: 5px;
     font-weight: 700;
     line-height: 1.3;
   }
   &__content {
-    font-size: 16px;
+    font-size: rem(16px);
     font-weight: 700;
     margin-bottom: 50px;
     p {
@@ -2242,12 +2242,12 @@ ol {
     margin-bottom: 40px;
     a {
       text-decoration: none;
-      font-size: 54px;
+      font-size: rem(54px);
       color: $color-dark;
       display: inline-block;
       font-weight: 500;
       .span {
-        font-size: 12px;
+        font-size: rem(12px);
         display: block;
       }
       :before {
@@ -2255,10 +2255,10 @@ ol {
         vertical-align: middle;
       }
       .icon-facebook {
-        font-size: 52px;
+        font-size: rem(52px);
       }
       .icon-vk {
-        font-size: 64px;
+        font-size: rem(64px);
       }
     }
     &>div {
@@ -2271,7 +2271,7 @@ ol {
     align-items: center;
     &>div {
       &.div1 {
-        font-size: 80px;
+        font-size: rem(80px);
         font-weight: 800;
         line-height: 1;
         vertical-align: middle;
@@ -2282,7 +2282,7 @@ ol {
         padding-left: 0px;
         padding-top: 10px;
         flex-grow: 1;
-        font-size: 12px;
+        font-size: rem(12px);
         color: rgba($color-dark,0.3);
         max-width: 246px;
       }
@@ -2320,7 +2320,7 @@ ol {
     };
     &__title {
       text-align: left;
-      font-size: 50px;
+      font-size: rem(50px);
     }
     &__content {
       text-align: left;

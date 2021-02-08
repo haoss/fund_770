@@ -3,22 +3,22 @@ input, textarea {
   &::-webkit-input-placeholder {
     color: rgba($color-dark,0.5);
     font-weight: 500;
-    font-size: 14px;
+    font-size: rem(14px);
   }
   &::-moz-placeholder {
     color: rgba($color-dark,0.5);
     font-weight: 500;
-    font-size: 14px;
+    font-size: rem(14px);
   }
   &:-ms-input-placeholder {
     color: rgba($color-dark,0.5);
     font-weight: 500;
-    font-size: 14px;
+    font-size: rem(14px);
   }
   &:-moz-placeholder {
     color: rgba($color-dark,0.5);
     font-weight: 500;
-    font-size: 14px;
+    font-size: rem(14px);
   }
 }
 
@@ -102,17 +102,17 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 }
 
 legend {
-  font-size: 20px;
+  font-size: rem(20px);
   display: block;
   border: 0;
   margin-bottom: 10px;
   font-weight: 800;
   color: $color-dark;
   @include media-breakpoint-up(md) {
-    font-size: 16px;
+    font-size: rem(16px);
   }
   @include media-breakpoint-up(lg) {
-    font-size: 18px;
+    font-size: rem(18px);
   }
 }
 
@@ -166,7 +166,7 @@ legend {
     transition: color 0.35s, border 0.35s, background 0.35s;
     caret-color: $color-dark;
     font-weight: 700;
-    font-size: 18px;
+    font-size: rem(18px);
     letter-spacing: 0.05em;
     &.css-input {
       padding-top: 20px;
@@ -188,7 +188,7 @@ legend {
       border-color: #fb7f7f;
       &+label {
         color: #fb7f7f;
-        font-size: 13px;
+        font-size: rem(13px);
         margin: 0;
         padding-left: 0px;
         font-weight: 400;
@@ -211,7 +211,7 @@ legend {
       &__input {
         padding-right: 50px;
         &~[class*="icon-"] {
-          font-size: 16px;
+          font-size: rem(16px);
           position: absolute;
           right: 19px;
           top: 50%;
@@ -330,7 +330,7 @@ textarea.field-text__input {
     visibility: hidden;
     &~.error {
       color: #fb7f7f;
-      font-size: 13px;
+      font-size: rem(13px);
       margin: 0;
       padding-left: 0;
       font-weight: 400;
@@ -693,7 +693,7 @@ textarea.field-text__input {
   margin: 0;
   display: block;
   font-weight: bold;
-  font-size: 18px;
+  font-size: rem(18px);
   color: $color-dark;
   text-align: center;
   letter-spacing: 0.05em;
@@ -730,6 +730,6 @@ textarea.field-text__input {
     }
   }
   .icon-rouble {
-    font-size: 16px;
+    font-size: rem(16px);
   }
 }

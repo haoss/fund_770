@@ -9,7 +9,7 @@ button {
 
 .btn {
   height: 70px;
-  font-size: 22px;
+  font-size: rem(22px);
   text-decoration: none;
   text-transform: uppercase;
   color: $color-white;

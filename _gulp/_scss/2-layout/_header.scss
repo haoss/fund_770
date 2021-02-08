@@ -21,7 +21,7 @@
   }
   &__lang {
     // display: none;
-    font-size: 16px;
+    font-size: rem(16px);
     text-transform: uppercase;
     margin-left: 10px;
     position: relative;
@@ -74,7 +74,7 @@
             font-weight: 400;
             content: "\e915";
             font-family: $font-icomoon;
-            font-size: 7px;
+            font-size: rem(7px);
             margin-left: 6px;
             position: relative;
             top: -1px;
@@ -100,7 +100,7 @@
         font-weight: 400;
         content: "\e915";
         font-family: $font-icomoon;
-        font-size: 7px;
+        font-size: rem(7px);
         margin-left: 6px;
       }
     }
