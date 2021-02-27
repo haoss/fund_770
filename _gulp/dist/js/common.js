@@ -109,12 +109,16 @@ $(document).on('ready', function(){
 
   $('.family__carousel').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
     var i = (currentSlide ? currentSlide : 0) + 1;
+    var textBlock1 = $('[data-slick-index="'+ currentSlide +'"]').find('.family__about-div2').html();
+    var textBlock2 = $('[data-slick-index="'+ currentSlide +'"]').find('.family__about-div1').html();
     if (i > 0 && i < 10) {
       $('.family__history-number .div1').text('0' + i);
     } else {
       $('.family__history-number .div1').text(i);
     }
-});
+    $('#family_div1').html(textBlock1);
+    $('#family_div2').html(textBlock2);
+  });
 
   $("form").each(function(){
     $(this).validate();

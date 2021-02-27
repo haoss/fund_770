@@ -1983,6 +1983,9 @@ ol {
     p {
       position: relative;
     }
+    &-div2, &-div1 {
+      display: none;
+    }
   }
   &__title {
     font-size: rem(18px);
